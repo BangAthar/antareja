@@ -1,0 +1,11 @@
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+
+@font-face {
+    font-family: "Mortend";
+    src: url('../fonts/Mortend.ttf');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');

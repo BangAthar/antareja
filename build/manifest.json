@@ -1,0 +1,16 @@
+{
+  "public/img/bg-antareja.png": {
+    "file": "assets/bg-antareja-b6e8404c.png",
+    "src": "public/img/bg-antareja.png"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-784356d1.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-ffa2faf6.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  }
+}
