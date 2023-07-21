@@ -107,7 +107,7 @@
                             </button>
                         </div>
                     </form>
-                    <div class="text-center pt-4 pb-8">Sudah punya akun? <span class="text-red-400"><a href="/login">Login</a></span></div>
+                    <div class="text-center pt-4 pb-8">Sudah punya akun? <span class="text-red-400 underline"><a href="/login">Login</a></span></div>
                 </div>
             </div>
         </div>

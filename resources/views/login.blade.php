@@ -60,8 +60,12 @@
                             </button>
                         </div>
                     </form>
-                    <div class="text-center pt-4">Belum Punya Akun? <span class="text-red-400"><a
-                                href="/register">Daftar!</a></span></div>
+                    <div class="text-center pt-4">
+                        Belum Punya Akun? <span class="text-red-400 underline"><a href="/register">Daftar!</a></span>
+                    </div>
+                    <div class="text-center pt-4 text-gray-800">
+                        Lupa password? <span class="text-red-400 underline"><a href="#" id="openPopup">Hubungi admin</a></span>
+                    </div>
                 </div>
             </div>
         </div>

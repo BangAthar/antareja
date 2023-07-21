@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="description" content="Antareja merupakan website informasi mengenai lomba keterampilan baris berbaris yang diadakan SMK Telkom Sandhy Putra Malang tahun 2023 pada bulan september">
+  <link rel="canonical" href="https://antareja.smktelkom-mlg.sch.id"/>
+  <meta property="og:site_name" content="Antareja">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://antareja.smktelkom-mlg.sch.id">
+  <meta property="og:title" content="Vexento Universe NFT">
+  <meta property="og:description" content="Vexento Universe Official Website - Have a collection of 3D robots from the vexento universe which is only available 666 items and each item is handcrafted by the hands of a young man who loved robots in his childhood">
+  <meta property="og:image" content="{{ asset('img/antareja-logo.png') }}">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@Antareja" />
+  <meta name="twitter:title" content="Antareja" />
+  <meta name="twitter:description" content="Antareja merupakan website informasi mengenai lomba keterampilan baris berbaris yang diadakan SMK Telkom Sandhy Putra Malang tahun 2023 pada bulan september" />
+  <meta name="twitter:creator" content="@Antareja" />
+  <meta name="author" content="Noxvall and Tegar">
+  <meta name="keywords" content="antareja, web, website,lomba, competition, smktelkom, smktelkommalang, malang, lkbb, paskibraka">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
@@ -17,7 +32,6 @@
   <script type="text/javascript" src="https://unpkg.com/trix@2.0.0/dist/trix.umd.min.js"></script>
 </head>
 <body class="text-blueGray-700 antialiased">
-  <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="popup" class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-opacity-50 bg-gray-900 hidden z-50">
     <div class="bg-white p-8 rounded-lg max-w-md">
       <h2 class="text-2xl font-bold mb-4">Antareja's Developer</h2>

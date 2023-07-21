@@ -33,3 +33,18 @@ document.addEventListener('DOMContentLoaded', function() {
         alertBox.remove();
     });
 });
+
+// Ambil elemen-elemen yang diperlukan
+const btnOpenPopup = document.getElementById('openPopup');
+const popup = document.getElementById('popup');
+const btnClosePopup = document.getElementById('closePopup');
+
+// Tambahkan event listener untuk membuka popup
+btnOpenPopup.addEventListener('click', function() {
+  popup.classList.remove('hidden');
+});
+
+// Tambahkan event listener untuk menutup popup
+btnClosePopup.addEventListener('click', function() {
+  popup.classList.add('hidden');
+});
