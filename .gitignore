@@ -1,0 +1,18 @@
+# Ignore vendor directory
+/vendor/
+
+# Ignore node_modules directory
+/node_modules/
+
+# Ignore .env file
+.env
+
+# Ignore IDE specific files (Visual Studio Code, PhpStorm, etc.)
+.vscode/
+.idea/
+
+# Ignore composer.lock file
+composer.lock
+
+# Ignore storage logs
+/storage/logs/
