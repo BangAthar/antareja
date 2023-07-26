@@ -14,7 +14,7 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 333
         script: |
-            cd /home/antareja1
+            cd /home/antareja1/antareja
             git pull
             git status
             npm install
