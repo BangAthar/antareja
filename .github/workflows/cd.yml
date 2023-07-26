@@ -14,7 +14,7 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 333
         script: |
-		npm install
-		npm run build
-		composer update
-		php artisan migrate:refresh
+            npm install
+            npm run build
+            composer update
+            php artisan migrate:refresh
