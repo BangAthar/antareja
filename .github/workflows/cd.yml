@@ -14,6 +14,9 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 333
         script: |
+            cd /home/antareja1
+            git pull
+            git status
             npm install
             npm run build
             composer update
