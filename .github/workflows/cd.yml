@@ -1,0 +1,26 @@
+name: remote ssh command
+on: [push]
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@v0.1.10
+      with:
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: 333
+        script: |
+            cd /home/mokletapps/backend_moklet_apps_v1
+            git pull
+            git status
+            npm install
+            cp .env.example .env
+            cd prisma
+            npx prisma migrate dev --name init
+            cd ../
+            pm2 reload index.js
+            pm2 restart index.js
