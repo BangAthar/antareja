@@ -10,7 +10,7 @@
     <meta property="og:url" content="https://antareja.smktelkom-mlg.sch.id">
     <meta property="og:title" content="Vexento Universe NFT">
     <meta property="og:description"
-        content="Vexento Universe Official Website - Have a collection of 3D robots from the vexento universe which is only available 666 items and each item is handcrafted by the hands of a young man who loved robots in his childhood">
+        content="Antareja merupakan website informasi mengenai lomba keterampilan baris berbaris yang diadakan SMK Telkom Sandhy Putra Malang tahun 2023 pada bulan september">
     <meta property="og:image" content="{{ asset('img/antareja-logo.png') }}">
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@Antareja" />
