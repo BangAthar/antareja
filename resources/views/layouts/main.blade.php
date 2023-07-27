@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-antareja bg-cover bg-center {{-- scroll-smoothscroll-p-16 --}}">
+<html lang="en" class="bg-antareja bg-cover bg-center scroll-smooth scroll-p-16">
 
 <head>
     <meta name="description"
