@@ -14,7 +14,7 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 333
         script: |
-            cd /home/antareja1/antareja
+            cd /var/www/html/antareja
             export COMPOSER_ALLOW_SUPERUSER=1; composer show;
             git pull
             git status
