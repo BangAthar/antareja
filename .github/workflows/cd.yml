@@ -15,6 +15,7 @@ jobs:
         port: 333
         script: |
             cd /home/antareja1/antareja
+            export COMPOSER_ALLOW_SUPERUSER=1; composer show;
             git pull
             git status
             npm install
