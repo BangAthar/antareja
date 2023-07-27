@@ -119,9 +119,8 @@
                         <div class="w-full mx-auto lg:mx-0 h-[80%] bg-white shadow rounded px-3 mt-2">
                             <form method="POST" action="{{ route('updateMember', ['id' => $member->id]) }}">
                                 @csrf
-                                <h6 class="text-blueGray-400 text-sm pt-3 mb-6 font-bold uppercase">
-                                    Input / edit data peserta
-                                    
+                                <h6 class="text-blueGray-600 text-sm pt-3 mb-6 font-bold uppercase">
+                                   Edit Peserta {{ $member->name }}
                                 </h6>
 
                                   @if (session()->has('success'))

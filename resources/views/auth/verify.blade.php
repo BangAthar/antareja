@@ -11,8 +11,7 @@
         @endif
 
         <p class="text-gray-600 mb-4">
-            Before proceeding, please check your email for a verification link.
-            If you did not receive the email, 
+            Silahkan klik text berwarna biru dibawah untuk mengirim email verifikasi kepada Anda.
         </p>
 
         <form method="POST" action="{{ route('verification.resend') }}">

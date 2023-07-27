@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-antareja bg-cover bg-center scroll-smooth scroll-p-16">
+<html lang="en" class="bg-antareja bg-cover bg-center {{-- scroll-smoothscroll-p-16 --}}">
 
 <head>
     <meta name="description"
@@ -159,7 +159,7 @@
                             rel="noopener noreferrer"><i class="fa-brands fa-instagram text-xl"></i></a>
                         <a href="https://www.youtube.com/@smktsmalang" target="_blank" rel="noopener noreferrer"><i
                                 class="fa-brands fa-youtube text-xl ml-3 lg:ml-0"></i></a>
-                        <a href="mailto:antareja@noxval.site" target="_blank" rel="noopener noreferrer"><i
+                        <a href="https://www.tiktok.com/@lkbb.antareja" target="_blank" rel="noopener noreferrer"><i
                                 class="fa-brands fa-tiktok ml-3 mt-2 lg:ml-0"></i></a>
                     </div>
                 </div>
@@ -168,12 +168,12 @@
                         <h1 class="font-bold text-xl w-[130px] mb-0 sm:mb-3 text-white">Contact Us</h1>
                         <a href="https://wa.me/6281259231428" class="font-medium text-lg mt-2 underline">Whatsap</a>
                         <a href="https://wa.me/6281259231428" class="font-medium text-lg mt-2 underline">Telephone</a>
-                        <a href="" class="font-medium text-lg mt-2 underline">Email</a>
+                        <a href="mailto:antareja@smktelkom-mlg.sch.id" class="font-medium text-lg mt-2 underline">Email</a>
                     </div>
                     <div class="container text-center flex flex-col">
                         <h1 class="font-bold text-xl w-[130px] mb-0 sm:mb-3 text-white">Support</h1>
                         <a href="https://wa.me/6281259231428" class="font-medium text-lg mt-2 underline">Sponsor</a>
-                        <a href="https://wa.me/6281259231428" class="font-medium text-lg mt-2 underline">Feedback</a>
+                        <a href="mailto:antareja@smktelkom-mlg.sch.id" class="font-medium text-lg mt-2 underline">Feedback</a>
                         <a href="/login" class="font-medium text-lg mt-2 underline">Account</a>
                     </div>
                     <div class="container text-center flex flex-col">

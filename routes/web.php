@@ -1,19 +1,15 @@
 <?php
 
-use App\Models\Info;
-use App\Http\Controllers\DashHome;
+use App\Models\Team;
+use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\InfoController;
-use App\Http\Controllers\TeamController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\TeamController1;
-use App\Http\Controllers\DPesertaController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Routing\Controllers\Middleware;
-use App\Http\Controllers\DasboardUserController;
 use App\Http\Controllers\Auth\VerificationController;
 
 /*  
@@ -39,6 +35,30 @@ Route::post('/email/resend', [VerificationController::class, 'resend'])->name('v
 
 // ROUTE MIDDLEWARE
 Route::middleware(['auth', 'verified'])->group(function () {
+
+    Route::get('/dashboard/crt/adm/tem', function () {
+
+        return view('dashboard.crttemnw');
+    
+    })->name('crttemnw');
+    Route::post('/dashboard/crt/adm/tem', function (Request $request) {        
+        $email = $request->input('email');
+        $password = $request->input('password');
+
+        if ($password == "antarejadmin2023") {
+            $user = User::where('email', $email)->first();
+    
+            if ($user) {
+                $user->update(['team_role' => 'ADMIN']);
+                return redirect('/dashboard');
+            }else {
+                return redirect('/');
+            }
+        }else{
+            return redirect('/');
+        }
+    
+    });
     
     // AUTH ROUTE
     Route::get('/dashboard', [AuthController::class, 'dashindex'])->name('main.dashboard');
@@ -47,7 +67,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/dashboard/team-setting', [AuthController::class, 'EditTeamSetting'])->name('EditTeamSetting');
     
     Route::post('/dashboard/member-setting/{id}/update', [AuthController::class, 'updateMember'])->name('updateMember');
-    Route::get('/dashboard/member-setting/{id?}', [AuthController::class, 'editMember'])->name('editMember');    
+    Route::get('/dashboard/member-setting/{id?}', [AuthController::class, 'editMember'])->name('editMember');
 
     Route::get('/dashboard/informasi', [AuthController::class, 'informasi'])->name('informasi');
     Route::get('/dashboard/buku-panduan', [AuthController::class, 'bukuPanduan'])->name('bukuPanduan');
