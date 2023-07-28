@@ -277,8 +277,8 @@
                                     <div class="text-white text-sm font-medium pb-1">Instagram : <a
                                             href="https://www.instagram.com/lkbb.antareja/"
                                             class="underline">@lkbb.antareja</a></div>
-                                    <div class="text-white text-sm font-medium">Email : <a href="#"
-                                            class="underline">info@antareja.com</a></div>
+                                    <div class="text-white text-sm font-medium">Email : <a href="mailto:antareja@smktelkom-mlg.sch.id"
+                                            class="underline">antareja@smktelkom-mlg.sch.id</a></div>
                                 </div>
                             </div>
                         </div>

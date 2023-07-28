@@ -4,9 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Models\Team;
 use App\Models\User;
+use App\Mail\WelcomeMail;
+use App\Models\Verifytoken;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
+use Symfony\Component\Mime\Email;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
 {
@@ -71,6 +80,21 @@ class RegisterController extends Controller
         // Hashing password sebelum menyimpannya ke database
         $validatedData['password'] = bcrypt($validatedData['password']);
 
+        // Generate verifikasi token
+        $validToken = rand(10,100..'2023');
+        $expirationTime = now()->addMinutes(10);
+
+        $get_token = new Verifytoken();
+        $get_token->token = $validToken;
+        $get_token->email = $validatedData['email'];
+        $get_token->expiration = $expirationTime;
+        $get_token->save();
+
+        // Kirim email verifikasi
+        $get_user_email = $validatedData['email'];
+        $get_user_name = $validatedData['name'];
+        Mail::to($validatedData['email'])->send(new WelcomeMail($get_user_email, $validToken, $get_user_name));
+
         // Simpan data ke database
         $user = new User();
         $user->team_id = $team->id;
@@ -84,6 +108,6 @@ class RegisterController extends Controller
         $user->password = $validatedData['password'];
         $user->save();
 
-        return redirect('/login')->with('success', 'Registrasi berhasil! Silakan login.');
+        return redirect('/login')->with('success', 'Data anda terdaftar di sistem.');
     }
 }

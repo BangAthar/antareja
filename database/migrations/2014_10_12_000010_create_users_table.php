@@ -21,9 +21,9 @@ return new class extends Migration
             $table->string('alamat')->nullable();
             $table->string('password');
             $table->string('team_role');
+            $table->boolean('is_activated')->default(0);
             $table->rememberToken();
             $table->timestamps();
-            $table->timestamp('email_verified_at')->nullable();
         });
     }
 

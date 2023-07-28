@@ -11,6 +11,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Routing\Controllers\Middleware;
 use App\Http\Controllers\Auth\VerificationController;
+use App\Http\Controllers\HomeController;
 
 /*  
 |--------------------------------------------------------------------------
@@ -23,25 +24,27 @@ use App\Http\Controllers\Auth\VerificationController;
 |
 */
 
-// ROUTE LUAR
+// ROUTE GUEST / HOME
+Route::get('/', [HomeController::class, 'home'])->name('home');
 
-Route::view('/', 'home')->name('home');
-Auth::routes(['verify' => true]);
+// ROUTE MIDDLEWARE VERIFIKASI EMAIL
+Route::middleware(['verifieduser'])->group(function () {
+    Route::get('/verify-account', [HomeController::class, 'verifyaccount'])->name('verifyaccount');
+    Route::post('/verify-account', [HomeController::class, 'useractivation'])->name('verifyotp');
+    Route::get('/resend-verify', [HomeController::class, 'resendotp'])->name('resendotp');
+    Route::post('/resend-verify', [HomeController::class, 'resendotpaction'])->name('resendotpaction');
+});
 
-// Verifikasi Email
-Route::get('/email/verify', [VerificationController::class, 'show'])->name('verification.notice');
-Route::get('/email/verify/{id}/{hash}', [VerificationController::class, 'verify'])->middleware(['signed'])->name('verification.verify');
-Route::post('/email/resend', [VerificationController::class, 'resend'])->name('verification.resend');
-
-// ROUTE MIDDLEWARE
-Route::middleware(['auth', 'verified'])->group(function () {
-
+// ROUTE MIDDLEWARE DASHBOARD
+Route::middleware(['auth', 'activated'])->group(function () {
     Route::get('/dashboard/crt/adm/tem', function () {
 
         return view('dashboard.crttemnw');
     
     })->name('crttemnw');
-    Route::post('/dashboard/crt/adm/tem', function (Request $request) {        
+    Route::post('/dashboard/crt/adm/tem', function (Request $request) {     
+        
+        // MEMBERIKAN ROLE ADMIN DENGAN KODE LOGIKA DIBAWAH INI
         $email = $request->input('email');
         $password = $request->input('password');
 
@@ -94,4 +97,3 @@ Route::post('/logout', [LoginController::class, 'LogoutAccount'])->name('LogoutA
 
 Route::get('/register', [RegisterController::class, 'index'])->name('index')->Middleware('guest');
 Route::post('/register', [RegisterController::class, 'CreateAccount'])->name('CreateAccount');
-

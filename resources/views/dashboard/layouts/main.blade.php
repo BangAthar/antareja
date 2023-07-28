@@ -184,8 +184,8 @@
 
                         <li class="items-center">
                             <a href="/dashboard/rekapan-nilai"
-                                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500">
-                                <i class="fa-solid fa-marker mr-2 text-sm text-blueGray-300"></i>
+                                class="text-xs uppercase py-3 font-bold block {{ Request::is('dashboard/rekapan-nilai') ? 'text-red-500 hover:text-red-700' : 'text-blueGray-700 hover:text-blueGray-500' }}">
+                                <i class="fa-solid fa-marker mr-2 text-sm {{ Request::is('dashboard/rekapan-nilai') ? '' : 'text-blueGray-300' }}"></i>
                                 Rekapan Nilai
                             </a>
                         </li>
