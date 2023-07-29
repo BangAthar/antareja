@@ -32,6 +32,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     @vite('resources/css/app.css')
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}" />
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">/
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>Antareja - Dashboard</title>

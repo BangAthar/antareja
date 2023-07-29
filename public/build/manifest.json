@@ -1,12 +1,17 @@
 {
+  "public/css/app.css": {
+    "file": "assets/app-9d2d1982.css",
+    "isEntry": true,
+    "src": "public/css/app.css"
+  },
   "public/img/bg-antareja.png": {
     "file": "assets/bg-antareja-b6e8404c.png",
     "src": "public/img/bg-antareja.png"
   },
   "resources/css/app.css": {
-    "file": "assets/app-0949de5e.css",
+    "file": "assets/app-9d2d1982.css",
     "isEntry": true,
-    "src": "resources/css/app.css"
+    "src": "public/css/app.css"
   },
   "resources/js/app.js": {
     "file": "assets/app-c1097373.js",
