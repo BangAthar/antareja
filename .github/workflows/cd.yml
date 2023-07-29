@@ -71,4 +71,4 @@ jobs:
 
             # Menjalankan php artisan migrate
             echo "========= Menjalankan php artisan migrate ========="
-            php artisan migrate:status
+            php artisan migrate:fresh --seed

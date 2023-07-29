@@ -19,7 +19,7 @@ class AdminController extends Controller
     public function storeCreateInformasi(Request $request)
     {
         $validatedData = $request->validate([
-            'pesan' => 'required|max:5000',
+            'pesan' => 'required',
         ]);
 
         $validatedData['user_id'] = auth()->id();
