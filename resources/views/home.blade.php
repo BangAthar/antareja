@@ -291,28 +291,22 @@
                 <div class="bg-[#f85b5b] rounded-md mx-auto sm:mx-0 sm:max-w-xs shadow-blue-nopal relative">
                     <div class="w-full absolute top-0 bg-[#732a2a] h-[8px] rounded-t"></div>
                     <div class="py-4 px-[75px] sm:py-4 sm:px-0">
-                        <img src="{{ asset('img/ggorganizer.png') }}" alt="Media Partner 1"
+                        <img src="{{ asset('img/LOGO_FPPM-transparan.png') }}" alt="Media Partner 1"
                             class="w-full h-32 object-contain my-[10%]">
                     </div>
                 </div>
                 <div class="bg-[#f85b5b] rounded-md mx-auto sm:mx-0 sm:max-w-xs shadow-blue-nopal relative">
                     <div class="w-full absolute top-0 bg-[#732a2a] h-[8px] rounded-t"></div>
-                    <div class="p-4 py-4 px-[35px] sm:py-4 sm:px-3 ">
-                        <div class="w-full mb-4 text-center text-7xl mt-4">
-                            <i class="fa-regular fa-handshake text-white"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-center text-white">Media anda</h3>
-                        <p class="text-center text-lg text-white">Menjadi media partner kami</p>
+                    <div class="py-4 px-[75px] sm:py-4 sm:px-0">
+                        <img src="{{ asset('img/LOGO_PKM.png') }}" alt="Media Partner 2"
+                            class="w-full h-32 object-contain my-[10%]">
                     </div>
                 </div>
                 <div class="bg-[#f85b5b] rounded-md mx-auto sm:mx-0 sm:max-w-xs shadow-blue-nopal relative">
                     <div class="w-full absolute top-0 bg-[#732a2a] h-[8px] rounded-t"></div>
-                    <div class="p-4 py-4 px-[35px] sm:py-4 sm:px-3 ">
-                        <div class="w-full mb-4 text-center text-7xl mt-4">
-                            <i class="fa-regular fa-handshake text-white"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-center text-white">Media anda</h3>
-                        <p class="text-center text-lg text-white">Menjadi media partner kami</p>
+                    <div class="py-4 px-[75px] sm:py-4 sm:px-0">
+                        <img src="{{ asset('img/NAWAK.png') }}" alt="Media Partner 3"
+                            class="w-full h-32 object-contain my-[10%]">
                     </div>
                 </div>
                 <div class="bg-[#f85b5b] rounded-md mx-auto sm:mx-0 sm:max-w-xs shadow-blue-nopal relative">

@@ -48,3 +48,9 @@ btnOpenPopup.addEventListener('click', function() {
 btnClosePopup.addEventListener('click', function() {
   popup.classList.add('hidden');
 });
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     // Semua konten website selesai dimuat
+//     // Sembunyikan preloader
+//     document.getElementById("preloader").classList.add('hidden');
+// });
