@@ -13,4 +13,5 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    base: 'http://localhost:8000',
 });

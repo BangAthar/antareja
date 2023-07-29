@@ -1,6 +1,6 @@
 {
   "public/css/app.css": {
-    "file": "assets/app-9d2d1982.css",
+    "file": "assets/app-66ed1e7a.css",
     "isEntry": true,
     "src": "public/css/app.css"
   },
@@ -9,17 +9,17 @@
     "src": "public/img/bg-antareja.png"
   },
   "public/js/app.js": {
-    "file": "assets/app-c42ce534.js",
+    "file": "assets/app-4ed993c7.js",
     "isEntry": true,
     "src": "public/js/app.js"
   },
   "resources/css/app.css": {
-    "file": "assets/app-9d2d1982.css",
+    "file": "assets/app-66ed1e7a.css",
     "isEntry": true,
     "src": "public/css/app.css"
   },
   "resources/js/app.js": {
-    "file": "assets/app-4ed993c7.js",
+    "file": "assets/app-c42ce534.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }

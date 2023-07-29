@@ -21,4 +21,5 @@ jobs:
             npm install
             npm run build
             composer update
+            git pull
             php artisan migrate:status
