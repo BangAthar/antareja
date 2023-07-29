@@ -14,12 +14,29 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 333
         script: |
+            # Masuk ke direktori root website
             cd /var/www/html/antareja
+
+            # Menjalankan COMPOSER ALLOW SUPERUSER
             export COMPOSER_ALLOW_SUPERUSER=1; composer show;
+
+            # Menjalankan git pull
             git pull
+
+            # Menjalankan git status
             git status
+
+            # Menjalankan npm install
             npm install
+
+            # Menjalankan npm run build
             npm run build
+
+            # Menjalankan composer uodate
             composer update
+
+            # Menjalankan git pull
             git pull
+
+            # Menjalankan php artisan migrate
             php artisan migrate:status
