@@ -144,7 +144,7 @@
         </div>
     </nav>
     @yield('container')
-    <section class="w-full h-[980px] sm:h-[700px] md:h-[750px] lg:h-[300px] bg-[#0e0e0e]">
+    <section class="w-full h-full pb-16 bg-[#0e0e0e]">
         <div class="container max-w-7xl px-4 mx-auto sm:px-6 lg:px-10">
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-3 pt-10">
                 <div class="mx-auto lg:mx-0 text-center lg:text-left w-[90%]">

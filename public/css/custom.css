@@ -12,5 +12,9 @@ body{
 
 
 .shadow-nopal{
-    box-shadow: 0 0 30px #58585882 !important;
+    box-shadow: 0 0 30px #FF1818 !important;
+}
+
+.shadow-blue-nopal{
+    box-shadow: 0 0 20px #9a3333 !important;
 }
