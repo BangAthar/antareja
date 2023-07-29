@@ -7,8 +7,11 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/js/app.js',
+                'public/css/app.css',
+                'public/js/app.js',
             ],
             refresh: true,
         }),
     ],
+    base: 'http://localhost:8000/',
 });
