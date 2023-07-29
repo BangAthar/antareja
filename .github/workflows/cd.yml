@@ -14,8 +14,23 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 333
         script: |
-            # Masuk ke direktori root website
-            echo "========= Masuk ke direktori root website ========="
+            # Masuk ke direktori website
+            echo "========= Masuk ke direktori website ========="
+            cd /var/www/html/antareja
+            echo -e "\n\n"
+
+            # Masuk ke direktori public
+            echo "========= Masuk ke direktori public ========="
+            cd /var/www/html/antareja/public
+            echo -e "\n\n"
+
+            # Menghapus folder build
+            echo "========= menghapus folder build ========="
+            rm -r build/
+            echo -e "\n\n"
+
+            # Masuk ke direktori website
+            echo "========= Masuk ke direktori website ========="
             cd /var/www/html/antareja
             echo -e "\n\n"
 
