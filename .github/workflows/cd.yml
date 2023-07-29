@@ -15,28 +15,45 @@ jobs:
         port: 333
         script: |
             # Masuk ke direktori root website
+            echo "Masuk ke direktori root website"
             cd /var/www/html/antareja
+            echo -e "\n\n"
 
             # Menjalankan COMPOSER ALLOW SUPERUSER
+            echo "Menjalankan COMPOSER ALLOW SUPERUSER"
             export COMPOSER_ALLOW_SUPERUSER=1; composer show;
+            echo -e "\n\n"
 
             # Menjalankan git pull
+            echo "Menjalankan git pull"
             git pull
+            echo -e "\n\n"
 
             # Menjalankan git status
+            echo "Menjalankan git status"
             git status
+            echo -e "\n\n"
 
             # Menjalankan npm install
+            echo "Menjalankan npm install"
             npm install
+            echo -e "\n\n"
 
             # Menjalankan npm run build
+            echo "Menjalankan npm run build"
             npm run build
+            echo -e "\n\n"
 
             # Menjalankan composer uodate
+            echo "Menjalankan composer update"
             composer update
+            echo -e "\n\n"
 
             # Menjalankan git pull
+            echo "Menjalankan git pull"
             git pull
+            echo -e "\n\n"
 
             # Menjalankan php artisan migrate
+            echo "Menjalankan php artisan migrate"
             php artisan migrate:status
