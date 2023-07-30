@@ -138,7 +138,7 @@
                                             <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2 w-full" for="nis">
                                                 NIS
                                             </label>
-                                            <input type="text" name="nis"
+                                            <input type="number" name="nis"
                                                 class="border-0 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150 @error('nis') border-red-500 @enderror"
                                                 value="{{ isset($member) ? $member->nis : old('nis') }}" placeholder="Masukan nis" />
                                                 @error('nis')
@@ -152,7 +152,7 @@
                                             <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2 w-full" for="nisn">
                                                 NISN
                                             </label>
-                                            <input type="text" name="nisn"
+                                            <input type="number" name="nisn"
                                                 class="border-0 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150 @error('nisn') border-red-500 @enderror"
                                                 value="{{ isset($member) ? $member->nisn : old('nisn') }}" placeholder="Masukan nisn" />
                                                 @error('nisn')
@@ -205,7 +205,7 @@
                                             <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2" for="nomor_hp">
                                                 Nomor Handphone
                                             </label>
-                                            <input type="text" name="nomor_hp"
+                                            <input type="number" name="nomor_hp"
                                                 class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150 @error('nomor_hp') border-red-500 @enderror"
                                                 value="{{ isset($member) ? $member->nomor_hp : old('nomor_hp') }}" placeholder="Masukan nomor handphone" />
                                                 @error('nomor_hp')

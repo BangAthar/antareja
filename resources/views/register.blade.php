@@ -28,7 +28,7 @@
                         
                         <div class="mb-4">
                             <label for="nis" class="block mb-1 text-md font-medium text-gray-700">NIS</label>
-                            <input id="nis" type="text" name="nis" value="{{ old('nis') }}" required autofocus
+                            <input id="nis" type="number" name="nis" value="{{ old('nis') }}" required autofocus
                                 class="px-4 py-2 border border-gray-300 rounded w-full @error('nis') border-red-500 @enderror" placeholder="Masukan NIS">
                             @error('nis')
                             <span class="text-red-500 text-sm mt-1">{{ $message }}</span>
@@ -37,7 +37,7 @@
                         
                         <div class="mb-4">
                             <label for="nisn" class="block mb-1 text-md font-medium text-gray-700">NISN</label>
-                            <input id="nisn" type="text" name="nisn" value="{{ old('nisn') }}" required autofocus
+                            <input id="nisn" type="number" name="nisn" value="{{ old('nisn') }}" required autofocus
                                 class="px-4 py-2 border border-gray-300 rounded w-full @error('nisn') border-red-500 @enderror" placeholder="Masukan nama tim anda">
                             @error('nisn')
                             <span class="text-red-500 text-sm mt-1">{{ $message }}</span>
