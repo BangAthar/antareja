@@ -19,6 +19,40 @@ jobs:
             cd /var/www/html/antareja
             echo -e "\n\n"
 
+            # Mengubah isi .env untuk APP_ENV
+            echo "========= Mengubah isi .env untuk APP_ENV ========="
+            sed -i 's/APP_ENV=.*/APP_ENV=production/g' .env
+            echo -e "\n\n"
+
+            # Mengubah isi .env untuk APP_DEBUG
+            echo "========= Mengubah isi .env untuk APP_DEBUG ========="
+            sed -i 's/APP_DEBUG=.*/APP_DEBUG=false/g' .env
+            echo -e "\n\n"
+
+            echo "========= Mengubah isi .env untuk DB_HOST ========="
+            sed -i 's/DB_HOST=.*/DB_HOST=157.245.199.47/g' .env
+            echo -e "\n\n"
+
+            # Mengubah isi .env untuk DB_PORT
+            echo "========= Mengubah isi .env untuk DB_PORT ========="
+            sed -i 's/DB_PORT=.*/DB_PORT=3306/g' .env
+            echo -e "\n\n"
+
+            # Mengubah isi .env untuk DB_DATABASE
+            echo "========= Mengubah isi .env untuk DB_DATABASE ========="
+            sed -i 's/DB_DATABASE=.*/DB_DATABASE=antareja/g' .env
+            echo -e "\n\n"
+
+            # Mengubah isi .env untuk DB_USERNAME
+            echo "========= Mengubah isi .env untuk DB_USERNAME ========="
+            sed -i 's/DB_USERNAME=.*/DB_USERNAME=antarejadbpublic/g' .env
+            echo -e "\n\n"
+
+            # Mengubah isi .env untuk DB_PASSWORD
+            echo "========= Mengubah isi .env untuk DB_PASSWORD ========="
+            sed -i 's/DB_PASSWORD=.*/DB_PASSWORD=antarejadb2023/g' .env
+            echo -e "\n\n"
+
             # Masuk ke direktori public
             echo "========= Masuk ke direktori public ========="
             cd /var/www/html/antareja/public
