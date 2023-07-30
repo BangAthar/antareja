@@ -8,7 +8,7 @@
     <meta property="og:site_name" content="Antareja">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://antareja.smktelkom-mlg.sch.id">
-    <meta property="og:title" content="Vexento Universe NFT">
+    <meta property="og:title" content="Antareja - Information about LKBB Antareja">
     <meta property="og:description"
         content="Antareja merupakan website informasi mengenai lomba keterampilan baris berbaris yang diadakan SMK Telkom Sandhy Putra Malang tahun 2023 pada bulan september">
     <meta property="og:image" content="{{ asset('img/antareja-logo.png') }}">
