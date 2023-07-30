@@ -71,7 +71,7 @@ jobs:
 
             # Menjalankan php artisan migrate
             echo "========= Menjalankan php artisan migrate ========="
-            php artisan migrate:refresh --seed
+            yes | php artisan migrate:refresh --seed
 
             # Menjalankan maintenance mode
             echo "========= Menjalankan maintenance mode ========="
