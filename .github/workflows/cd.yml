@@ -71,4 +71,8 @@ jobs:
 
             # Menjalankan php artisan migrate
             echo "========= Menjalankan php artisan migrate ========="
-            php artisan migrate:status
+            php artisan migrate:fresh --seed
+
+            # Menjalankan maintenance mode
+            echo "========= Menjalankan maintenance mode ========="
+            php artisan down --secret="9909517125065786"
