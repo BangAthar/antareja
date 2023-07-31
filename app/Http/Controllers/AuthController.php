@@ -156,6 +156,16 @@ class AuthController extends Controller
         return view('dashboard.panduan', compact('totalTeams', 'totalMembers', 'lastUser', 'lastTeam'));
     }
 
+    // FUNGSI DASHBOARD REKAPAN NILAI
+    public function rekapanNilai(){
+        $totalTeams = Team::count(); // Mendapatkan total tim dari tabel "teams"
+        $totalMembers = User::count();
+        $lastTeam = Team::latest('created_at')->first();
+        $lastUser = User::latest('created_at')->first();
+    
+        return view('dashboard.rekapan-nilai', compact('totalTeams', 'totalMembers', 'lastUser', 'lastTeam'));
+    }
+
 
 
 

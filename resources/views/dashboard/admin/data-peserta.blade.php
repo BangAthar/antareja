@@ -119,7 +119,7 @@
                                             htmlFor="grid-password" for="">
                                             Alamat Rumah
                                         </label>
-                                        <textarea id="address" name="" rows="4" class="border border-gray-300 rounded-md w-full" readonly></textarea>
+                                        <textarea id="address" name="" rows="4" class="border border-gray-300 rounded-md w-full" readonly>{{ $showuser->alamat }}</textarea>
                                     </div>
                                 </div>
                                 @else

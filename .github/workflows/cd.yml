@@ -64,6 +64,14 @@ jobs:
             composer update
             echo -e "\n\n"
 
+            # Menjalankan cache clear
+            echo "========= Menjalankan cache clear ========="
+            php artisan c:Cache
+
+            # Menjalankan route clear
+            echo "========= Menjalankan route clear ========="
+            php artisan r:clear
+
             # Menjalankan git pull
             echo "========= Menjalankan git pull ========="
             git pull

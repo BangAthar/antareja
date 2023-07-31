@@ -74,7 +74,7 @@ Route::middleware(['auth', 'activated'])->group(function () {
 
     Route::get('/dashboard/informasi', [AuthController::class, 'informasi'])->name('informasi');
     Route::get('/dashboard/buku-panduan', [AuthController::class, 'bukuPanduan'])->name('bukuPanduan');
-    Route::view('/dashboard/rekapan-nilai', 'dashboard.rekapan-nilai');
+    Route::get('/dashboard/rekapan-nilai', [AuthController::class, 'rekapanNilai'])->name('rekapanNilai');
 
     Route::group(['middleware' => 'admin'], function(){
         Route::get('/dashboard/create-informasi', [AdminController::class, 'createInformasi'])->name('infoCreate');
@@ -85,7 +85,7 @@ Route::middleware(['auth', 'activated'])->group(function () {
 
         Route::get('/dashboard/data-peserta', [AdminController::class, 'datapeserta'])->name('data-peserta');
         Route::get('/dashboard/data-team', [AdminController::class, 'datateam'])->name('data-team');
-        Route::view('/dashboard/rekapnilai-setting', 'dashboard.admin.rekap-setting');
+        Route::view('/dashboard/rekapnilai-setting', 'dashboard.rekapnilai-setting');
     });
     
 });

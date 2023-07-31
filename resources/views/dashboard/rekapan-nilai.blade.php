@@ -13,7 +13,7 @@
                                     TOTAL TEAMS
                                 </h5>
                                 <span class="font-semibold text-xl text-blueGray-700">
-                                    {{-- {{ $totalTeams }} --}} NULL
+                                    {{ $totalTeams }}
                                 </span>
                             </div>
                             <div class="relative w-auto pl-4 flex-initial">
@@ -24,7 +24,7 @@
                             </div>
                         </div>
                         <p class="text-sm text-blueGray-400 mt-4">
-                            <span class="whitespace-nowrap"> NULL </span>
+                            <span class="whitespace-nowrap"> {{ $lastTeam->created_at->diffForHumans() }} </span>
                         </p>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                                     TOTAL MEMBERS
                                 </h5>
                                 <span class="font-semibold text-xl text-blueGray-700">
-                                    {{-- {{ $totalMembers }} --}} NULL
+                                    {{ $totalMembers }}
                                 </span>
                             </div>
                             <div class="relative w-auto pl-4 flex-initial">
@@ -49,7 +49,7 @@
                             </div>
                         </div>
                         <p class="text-sm text-blueGray-400 mt-4">
-                            <span class="whitespace-nowrap"> NULL </span>
+                            <span class="whitespace-nowrap"> {{ $lastUser->created_at->diffForHumans() }} </span>
                         </p>
                     </div>
                 </div>
@@ -111,12 +111,12 @@
                     <div class="flex flex-wrap items-center">
                         <div class="relative w-full px-4 max-w-full flex-grow flex-1">
                             <h3 class="font-semibold text-base text-blueGray-700 uppercase">
-                                 NULL
+                                 Hasil Penilaian Lomba
                             </h3>
                         </div>
                         <div class="relative w-full max-w-full flex flex-col gap-2">
                             <hr class="my-4 md:min-w-full" />
-                            MASIH DALAM PERBAIKAN
+                            Masih dalam tahap pengembangan dan belum dibuka
                         </div>
                     </div>
                 </div>
