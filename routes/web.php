@@ -24,6 +24,10 @@ use App\Http\Controllers\HomeController;
 |
 */
 
+// TEST ROUTE
+// Route::view('/mt', 'maintenance');
+
+
 // ROUTE GUEST / HOME
 Route::get('/', [HomeController::class, 'home'])->name('home');
 
