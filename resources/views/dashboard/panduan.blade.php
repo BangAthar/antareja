@@ -117,7 +117,7 @@
                         <div class="relative w-full max-w-full mt-3">
                             <div class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
                                 <div class="w-full max-w-2xl">
-                                    <embed src="https://drive.google.com/file/d/1W_Q9dQBvR5TnDreYKWIz4h9kboNLTEQ_/view" type="application/pdf" class="w-full h-screen"></embed>
+                                    <embed src="https://drive.google.com/file/d/1W_Q9dQBvR5TnDreYKWIz4h9kboNLTEQ_/preview" type="application/pdf" class="w-full h-screen"></embed>
                                 </div>
                               </div>
                         </div>
