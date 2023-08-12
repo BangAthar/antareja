@@ -74,12 +74,14 @@ jobs:
 
             # Menjalankan git pull
             echo "========= Menjalankan git pull ========="
-            git pull
+            git checkout main
+            git pull origin main
+            git merge main
             echo -e "\n\n"
 
             # Menjalankan php artisan migrate
             echo "========= Menjalankan php artisan migrate ========="
-            php artisan migrate:status
+            php artisan storage:link
 
             # Menjalankan maintenance mode
             echo "========= Menjalankan maintenance mode ========="
