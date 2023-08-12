@@ -24,8 +24,7 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-// TEST ROUTE
-// Route::view('/mt', 'maintenance');
+
 
 
 // ROUTE GUEST / HOME
@@ -83,21 +82,26 @@ Route::middleware(['auth', 'activated'])->group(function () {
     Route::group(['middleware' => 'admin'], function(){
         Route::get('/dashboard/create-informasi', [AdminController::class, 'createInformasi'])->name('infoCreate');
         Route::post('/dashboard/create-informasi', [AdminController::class, 'storeCreateInformasi'])->name('infoStore');
-
-        Route::get('/dashboard/create-team', [AdminController::class, 'createTeam'])->name('showcreateteam');
-        Route::post('/dashboard/create-team', [AdminController::class, 'storeCreateTeam'])->name('storeCreateTeam');
-
         Route::get('/dashboard/data-peserta', [AdminController::class, 'datapeserta'])->name('data-peserta');
         Route::get('/dashboard/data-team', [AdminController::class, 'datateam'])->name('data-team');
-        Route::view('/dashboard/rekapnilai-setting', 'dashboard.rekapnilai-setting');
+        Route::post('/dashboard/data-team', [AdminController::class, 'teamverify'])->name('teamverify');
+        Route::view('/dashboard/rekapnilai-setting', 'dashboard.admin.rekap-setting');
     });
     
 });
 
 // authenticate
+Route::get('/userops', [LoginController::class, 'userops'])->name('userops')->Middleware('guest');
+
 Route::get('/login', [LoginController::class, 'index'])->name('login')->Middleware('guest');
 Route::post('/login', [LoginController::class, 'LoginAccount'])->name('LoginAccount');
 Route::post('/logout', [LoginController::class, 'LogoutAccount'])->name('LogoutAccount');
 
 Route::get('/register', [RegisterController::class, 'index'])->name('index')->Middleware('guest');
 Route::post('/register', [RegisterController::class, 'CreateAccount'])->name('CreateAccount');
+Route::get('/register-team', [RegisterController::class, 'registeamindex'])->name('registeamindex')->Middleware('guest');
+Route::post('/register-team', [RegisterController::class, 'registeamadd'])->name('registeamadd');
+
+
+// TEST ROUTE
+// Route::view('/mt', 'maintenance');

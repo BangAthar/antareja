@@ -20,9 +20,9 @@
                     </div>
                 </div>
                 <div class="flex flex-col lg:flex-row gap-2 px-4 py-10 pt-0 justify-between">
-                    <div class="w-full mx-auto lg:mx-0 h-[80%] bg-white shadow rounded px-3 mt-2">
+                    <div class="w-full mx-auto lg:mx-0 h-[80%] bg-white shadow rounded px-3 mt-2 pb-6">
                         <form method="POST" accept="">
-                            <h6 class="text-blueGray-400 text-sm pt-3 mb-6 font-bold uppercase">
+                            <h6 class="text-blueGray-400 pt-3 mb-6 font-bold uppercase">
                                 Lihat data team
                             </h6>
 
@@ -94,6 +94,41 @@
                                             class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow w-full ease-linear transition-all duration-150"
                                             value="{{ $showteam->team_school_postal }}" placeholder="Kode Pos sekolah" name="" readonly/>
                                     </div>
+                                </div>
+
+                                {{-- DATA PEMBAYARAN --}}
+
+                                <div class="text-blueGray-400 pt-3 font-bold uppercase">DATA PEMBAYARAN</div>
+                                @if ($showteam->is_verified == 0)    
+                                <div class="flex flex-col mt-2">
+                                    <span class="font-semibold text-blueGray-600">Tombol verifikasi jika team terkonfirmasi telah membayar :</span>
+                                    <form action="" method="post">
+                                        @csrf
+                                        <button class="px-2 py-2 mx-auto mt-1 bg-green-600 w-[98%] text-white font-semibold rounded shadow-green-600" onclick="return confirm('Apakah Anda yakin team ini sudah terkonfirmasi membayar?')">Verifikasi Team <span>{{ $showteam->team_name }}</span></button>
+                                    </form>
+                                </div>
+                                @endif
+                                <div class="my-5 w-full h-[2px] rounded-xl bg-gray-600 md:min-w-full"></div>
+                                <div class="flex flex-wrap">
+                                    <span class="font-semibold text-blueGray-600 px-2">TIPE PEMBAYARAN :</span>
+                                    <div class="text-md font-semibold text-green-700 ml-2">{{ $showteam->team_school_payment }}</div>
+                                </div>
+                                <div class="flex flex-wrap">
+                                    <span class="font-semibold text-blueGray-600 px-2">TIPE SEKOLAH :</span>
+                                    <div class="text-md font-semibold text-green-700 ml-2">{{ $showteam->team_school_type }}</div>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="font-semibold text-blueGray-600 px-2">STATUS PEMBAYARAN :</span>
+                                    @if ($showteam->is_verified == 0)
+                                    
+                                    <div class="w-[98%] mx-auto py-2 bg-red-600 font-bold text-white text-center rounded mt-1">PEMBAYARAN BELUM DI VERIFIKASI</div>
+                                    @else
+                                    <div class="w-[98%] mx-auto py-2 bg-green-600 font-bold text-white text-center rounded mt-1">PEMBAYARAN SUDAH DI VERIFIKASI</div>
+                                    @endif
+                                </div>
+                                <div class="flex flex-col mt-1">
+                                    <span class="font-semibold text-blueGray-600 px-2">BUKTI PEMBAYARAN :</span>
+                                    <img src="{{ asset('storage/' . $showteam->team_payment_proof) }}" class="rounded shadow-sm mt-1" alt="" srcset="">
                                 </div>
                                 @else
                                 <div class="w-full">

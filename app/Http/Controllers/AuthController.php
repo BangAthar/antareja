@@ -22,9 +22,11 @@ class AuthController extends Controller
 
         $lastTeam = Team::latest('created_at')->first();
         $lastUser = User::latest('created_at')->first();
-        
+
+        $teamVerified = Team::find(auth()->user()->team_id);   
+
         $infos = Info::latest()->with('author')->get();
-        return view('dashboard.index', compact('infos', 'totalTeams', 'totalMembers', 'lastUser', 'lastTeam'));
+        return view('dashboard.index', compact('infos', 'totalTeams', 'totalMembers', 'lastUser', 'lastTeam', 'teamVerified'));
     }
 
     // FUNGSI DASHBOARD TEAM SETTING
@@ -38,8 +40,10 @@ class AuthController extends Controller
 
         $lastTeam = Team::latest('created_at')->first();
         $lastUser = User::latest('created_at')->first();
+
+        $teamVerified = Team::find(auth()->user()->team_id);   
     
-        return view('dashboard.team', compact('user', 'team', 'teamMembers', 'totalTeams', 'totalMembers', 'lastUser', 'lastTeam'));
+        return view('dashboard.team', compact('user', 'team', 'teamMembers', 'totalTeams', 'totalMembers', 'lastUser', 'lastTeam', 'teamVerified'));
     }
 
     public function EditTeamSetting(Request $request)
@@ -90,13 +94,15 @@ class AuthController extends Controller
         $lastTeam = Team::latest('created_at')->first();
         $lastUser = User::latest('created_at')->first();
 
+        $teamVerified = Team::find(auth()->user()->team_id); 
+
         if ($id) {
             $member = User::findOrFail($id);
             $teams = Team::all();
-            return view('dashboard.member', compact('member', 'teams', 'user', 'teamMembers', 'totalMembers' , 'totalTeams', 'lastUser', 'lastTeam'));
+            return view('dashboard.member', compact('member', 'teams', 'user', 'teamMembers', 'totalMembers' , 'totalTeams', 'lastUser', 'lastTeam', 'teamVerified'));
         } else {
             $member = auth()->user();
-            return view('dashboard.member', compact('user', 'teamMembers', 'totalMembers', 'member', 'totalTeams', 'lastUser', 'lastTeam'));
+            return view('dashboard.member', compact('user', 'teamMembers', 'totalMembers', 'member', 'totalTeams', 'lastUser', 'lastTeam', 'teamVerified'));
         }
     }
 
@@ -141,8 +147,10 @@ class AuthController extends Controller
         $lastTeam = Team::latest('created_at')->first();
         $lastUser = User::latest('created_at')->first();
 
+        $teamVerified = Team::find(auth()->user()->team_id);  
+
         $infos = Info::latest()->with('author')->get();
-        return view('dashboard.informasi', compact('infos', 'totalTeams', 'totalMembers', 'lastUser', 'lastTeam'));
+        return view('dashboard.informasi', compact('infos', 'totalTeams', 'totalMembers', 'lastUser', 'lastTeam', 'teamVerified'));
     }
 
     // FUNGSI DASHBOARD BUKU PANDUAN
@@ -153,7 +161,9 @@ class AuthController extends Controller
         $lastTeam = Team::latest('created_at')->first();
         $lastUser = User::latest('created_at')->first();
 
-        return view('dashboard.panduan', compact('totalTeams', 'totalMembers', 'lastUser', 'lastTeam'));
+        $teamVerified = Team::find(auth()->user()->team_id);  
+
+        return view('dashboard.panduan', compact('totalTeams', 'totalMembers', 'lastUser', 'lastTeam', 'teamVerified'));
     }
 
     // FUNGSI DASHBOARD REKAPAN NILAI
@@ -162,8 +172,10 @@ class AuthController extends Controller
         $totalMembers = User::count();
         $lastTeam = Team::latest('created_at')->first();
         $lastUser = User::latest('created_at')->first();
+
+        $teamVerified = Team::find(auth()->user()->team_id);
     
-        return view('dashboard.rekapan-nilai', compact('totalTeams', 'totalMembers', 'lastUser', 'lastTeam'));
+        return view('dashboard.rekapan-nilai', compact('totalTeams', 'totalMembers', 'lastUser', 'lastTeam', 'teamVerified'));
     }
 
 

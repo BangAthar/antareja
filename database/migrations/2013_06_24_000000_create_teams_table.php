@@ -16,6 +16,10 @@ return new class extends Migration
             $table->string('team_school_province')->default('');
             $table->string('team_school_city')->default('');
             $table->string('team_school_postal')->default('');
+            $table->string('team_school_type')->default('');
+            $table->string('team_school_payment')->default('');
+            $table->string('team_payment_proof')->default('');
+            $table->boolean('is_verified')->default(0);
             $table->timestamps();
         });
         

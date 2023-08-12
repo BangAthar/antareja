@@ -26,14 +26,10 @@ class RegisterController extends Controller
     public function CreateAccount(Request $request)
     {
         $validatedData = $request->validate([
-            'name' => 'required|max:100',
+            'name' => 'required|max:250',
             'team_name' => 'required|max:100',
-            'nis' => 'required|max:100',
-            'nisn' => 'required|max:100',
-            'sekolah' => 'required|max:100',
             'email' => 'required|email:dns|unique:users,email',
             'team_role' => 'required|max:100',
-            'instagram' => 'required|max:100',
             'password' => 'required|confirmed|min:8',
             'password_confirmation' => 'required|min:8',
         ]);
@@ -42,9 +38,6 @@ class RegisterController extends Controller
         if ($request->password !== $request->password_confirmation) {
             return redirect()->back()->withErrors(['password_confirmation' => 'Password tidak sesuai']);
         }
-
-        // Mengubah sekolah menjadi huruf kapital
-        $validatedData['sekolah'] = strtoupper($validatedData['sekolah']);
 
         // Mengubah sekolah menjadi huruf kapital
         $validatedData['team_role'] = strtoupper($validatedData['team_role']);
@@ -98,16 +91,53 @@ class RegisterController extends Controller
         // Simpan data ke database
         $user = new User();
         $user->team_id = $team->id;
-        $user->nis = $validatedData['nis'];
-        $user->nisn = $validatedData['nisn'];
         $user->name = $validatedData['name'];
-        $user->sekolah = $validatedData['sekolah'];
         $user->email = $validatedData['email'];
         $user->team_role = $validatedData['team_role'];
-        $user->instagram = $validatedData['instagram'];
         $user->password = $validatedData['password'];
         $user->save();
 
         return redirect('/login')->with('success', 'Data anda terdaftar di sistem.');
+    }
+
+    public function registeamindex()
+    {
+        return view('register-team');
+    }
+
+    public function registeamadd(Request $request){
+        $validatedData = $request->validate([
+            'team_name' => 'required|max:100',
+            'team_school_type' => 'required|max:100',
+            'team_school_payment' => 'required|max:100',
+            'team_payment_proof' => 'image|mimes:jpeg,png,jpg|max:5248',
+        ]);
+
+        $teamName = strtoupper($validatedData['team_name']);
+        $validatedData['team_school_type'] = strtoupper($validatedData['team_school_type']);
+        $validatedData['team_school_payment'] = strtoupper($validatedData['team_school_payment']);
+
+        // Cek apakah team_name sudah ada dalam tabel teams (dalam bentuk huruf kapital)
+        $teamExists = Team::whereRaw('UPPER(team_name) = ?', [$teamName])->exists();
+        
+        if ($teamExists) {
+            // Nama tim sudah terdaftar
+            return redirect()->back()->withErrors(['team_name' => 'Nama tim sudah terdaftar']);
+        }
+
+        // Simpan data ke database
+        $team = new Team();
+        $team->team_name = $teamName;
+        $team->team_school_type = $validatedData['team_school_type'];
+        $team->team_school_payment = $validatedData['team_school_payment'];
+
+        if ($request->hasFile('team_payment_proof')) {
+            $imagePath = $request->file('team_payment_proof')->store('bukti-pembayaran','public');
+            $team->team_payment_proof = $imagePath;
+        }
+
+        $team->save();
+
+        return redirect('/register')->with('success', 'Team berhasil didaftarkan ke sistem');
     }
 }

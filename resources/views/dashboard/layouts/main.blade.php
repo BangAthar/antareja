@@ -105,8 +105,11 @@
                                 class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
                                 {{ auth()->user()->name }}</div>
                             <div class="h-0 my-2 border border-solid border-blueGray-100"></div>
-                            <a href="{{ route('LogoutAccount') }}"
-                                class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-red-400">Logout</a>
+                            <form action="{{ route('LogoutAccount') }}" method="post">
+                                @csrf
+                                <button href="#"
+                                    class="text-left text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-red-400">Logout</button>
+                            </form>
                         </div>
                     </li>
                 </ul>
@@ -206,17 +209,6 @@
                                     <i
                                         class="fa-solid fa-lock mr-2 text-sm opacity-75 {{ Request::is('dashboard/create-informasi') ? '' : 'text-blueGray-300' }}"></i>
                                     Tambahkan Informasi
-                                </a>
-                            </li>
-                        </ul>
-
-                        <ul class="md:flex-col md:min-w-full flex flex-col list-none">
-                            <li class="items-center">
-                                <a href="/dashboard/create-team"
-                                    class="{{ Request::is('dashboard/create-team') ? 'text-red-500 hover:text-red-700' : 'text-blueGray-700 hover:text-blueGray-500' }} text-xs uppercase py-3 font-bold block">
-                                    <i
-                                        class="fa-solid fa-lock mr-2 text-sm opacity-75 {{ Request::is('dashboard/create-team') ? '' : 'text-blueGray-300' }}"></i>
-                                    Tambahkan Team
                                 </a>
                             </li>
                         </ul>

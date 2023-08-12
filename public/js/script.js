@@ -54,3 +54,12 @@ btnClosePopup.addEventListener('click', function() {
 //     // Sembunyikan preloader
 //     document.getElementById("preloader").classList.add('hidden');
 // });
+
+function showFileName(input) {
+    const fileNameSpan = document.getElementById('file-name');
+    if (input.files && input.files.length > 0) {
+        fileNameSpan.textContent = input.files[0].name;
+    } else {
+        fileNameSpan.textContent = '';
+    }
+}

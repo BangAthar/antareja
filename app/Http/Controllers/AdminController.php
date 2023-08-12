@@ -86,4 +86,16 @@ class AdminController extends Controller
 
         return view('dashboard.admin.data-team', compact('teams', 'showteam'));
     }
+
+    public function teamverify(Request $request){
+        $teamId = $request->input('team');
+        $team = Team::find($teamId);;
+
+    if ($team) {
+        $team->is_verified = 1; // Mengubah is_verified menjadi 1
+        $team->save();
+    }
+
+    return back();
+    }
 }

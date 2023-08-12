@@ -109,7 +109,7 @@
                                 </div>
                             </div>
                         @else
-                            <a href="/login"
+                            <a href="/userops"
                                 class="text-black-50 hover:text-gray-500 px-3 py-2 rounded-md text-md font-medium"><i
                                     class="fa-solid fa-user"></i> login</a>
                         @endauth
@@ -146,7 +146,7 @@
                         </div>
                     </div>
                 @else
-                    <a href="/login"
+                    <a href="/userops"
                         class="text-black-50 hover:text-gray-500 px-3 py-2 rounded-md text-md font-medium"><i
                             class="fa-solid fa-user"></i> login</a>
                 @endauth
@@ -197,8 +197,8 @@
                     <h1 class="text-white font-bold text-xl mb-5">Join With Us</h1>
                     <p class="font-medium text-lg text-gray-300 mb-5">Gabung bersama kami dan buktikan tim-mu yang
                         terbaik</p>
-                    <a href="https://forms.gle/9qSU9jSyiEVAAs5K6"
-                        class="text-white font-medium py-3 px-5 bg-[#FF5733] rounded font-medium">Daftar Sekarang</a>
+                    <a href="/userops"
+                        class="text-white py-3 px-5 bg-[#FF5733] rounded font-medium">Daftar Sekarang</a>
                 </div>
             </div>
         </div>

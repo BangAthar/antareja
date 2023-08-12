@@ -11,13 +11,13 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->foreignId('team_id')->default(0);
-            $table->string('nis');
-            $table->string('nisn');
+            $table->string('nis')->default('');
+            $table->string('nisn')->default('');
             $table->string('name');
-            $table->string('sekolah');
+            $table->string('sekolah')->nullable();
             $table->string('email')->unique();
             $table->string('nomor_hp')->maxLength(12)->nullable();
-            $table->string('instagram');
+            $table->string('instagram')->nullable();
             $table->string('alamat')->nullable();
             $table->string('password');
             $table->string('team_role');
