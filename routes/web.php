@@ -104,4 +104,4 @@ Route::post('/register-team', [RegisterController::class, 'registeamadd'])->name
 
 
 // TEST ROUTE
-// Route::view('/mt', 'maintenance');
+Route::view('/mt', 'maintenance');

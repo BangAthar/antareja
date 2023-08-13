@@ -76,7 +76,7 @@ jobs:
             echo "========= Menjalankan git pull ========="
             git checkout main
             git pull origin main
-            git merge -X theirs main
+            git merge main
             echo -e "\n\n"
 
             # Menjalankan php artisan migrate
@@ -85,4 +85,4 @@ jobs:
 
             # Menjalankan maintenance mode
             echo "========= Menjalankan maintenance mode ========="
-            php artisan up
+            php artisan down --render="maintenance"
