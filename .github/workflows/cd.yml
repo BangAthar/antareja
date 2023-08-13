@@ -85,4 +85,4 @@ jobs:
 
             # Menjalankan maintenance mode
             echo "========= Menjalankan maintenance mode ========="
-            php artisan up
+            php artisan down --render="maintenance"
