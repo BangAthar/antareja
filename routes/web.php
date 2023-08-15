@@ -40,32 +40,6 @@ Route::middleware(['verifieduser'])->group(function () {
 
 // ROUTE MIDDLEWARE DASHBOARD
 Route::middleware(['auth', 'activated'])->group(function () {
-    Route::get('/dashboard/crt/adm/tem', function () {
-
-        return view('dashboard.crttemnw');
-    
-    })->name('crttemnw');
-    Route::post('/dashboard/crt/adm/tem', function (Request $request) {     
-        
-        // MEMBERIKAN ROLE ADMIN DENGAN KODE LOGIKA DIBAWAH INI
-        $email = $request->input('email');
-        $password = $request->input('password');
-
-        if ($password == "antarejadmin2023") {
-            $user = User::where('email', $email)->first();
-    
-            if ($user) {
-                $user->update(['team_role' => 'ADMIN']);
-                return redirect('/dashboard');
-            }else {
-                return redirect('/');
-            }
-        }else{
-            return redirect('/');
-        }
-    
-    });
-    
     // AUTH ROUTE
     Route::get('/dashboard', [AuthController::class, 'dashindex'])->name('main.dashboard');
 
