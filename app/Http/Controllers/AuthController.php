@@ -2,15 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\Info;
 use App\Models\Team;
+
 use App\Models\User;
 
-use Carbon\Carbon;
-
+use App\Models\Nilaipbb;
+use App\Models\nilaidanpas;
+use App\Models\nilaigertam;
+use App\Models\nilaikostum;
+use App\Models\nilaiformasi;
+use App\Models\nilaipasukan;
+use App\Models\nilaivariasi;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use Illuminate\Validation\Rule;
+use App\Http\Controllers\Controller;
 
 class AuthController extends Controller
 {
@@ -38,9 +45,11 @@ class AuthController extends Controller
         $totalMembers = User::count(); // Mendapatkan total anggota tim dari tabel "users"
         $totalTeams = Team::count(); // Mendapatkan total tim dari tabel "teams"
 
+        // Mendapatkan tim dan peserta terbaru
         $lastTeam = Team::latest('created_at')->first();
         $lastUser = User::latest('created_at')->first();
 
+        // TEAM VERIFIED
         $teamVerified = Team::find(auth()->user()->team_id);   
     
         return view('dashboard.team', compact('user', 'team', 'teamMembers', 'totalTeams', 'totalMembers', 'lastUser', 'lastTeam', 'teamVerified'));
@@ -85,8 +94,7 @@ class AuthController extends Controller
             WHEN team_role = 'OFFICIAL' THEN 2 
             WHEN team_role = 'DANPAS' THEN 3 
             ELSE 4 
-        END")
-            ->get();
+        END")->get();
 
         $totalTeams = Team::count(); // Mendapatkan total tim dari tabel "teams"
         $totalMembers = User::count(); // Mendapatkan total anggota tim dari tabel "users"
@@ -168,14 +176,55 @@ class AuthController extends Controller
 
     // FUNGSI DASHBOARD REKAPAN NILAI
     public function rekapanNilai(){
+        $totalpbb = 0;
+        $totaldanpas = 0;
+        $totalformasi = 0;
+        $totalgertam = 0;
+        $totalkostum = 0;
+        $totalpasukan = 0;
+        $totalvariasi = 0;
+
+        $user = auth()->user();
+        $team = Team::find($user->team_id);
+
+        $pbb = Nilaipbb::where('team_id', $team->id)->first();
+        $danpas = nilaidanpas::where('team_id', $team->id)->first();
+        $formasi = nilaiformasi::where('team_id', $team->id)->first();
+        $gertam = nilaigertam::where('team_id', $team->id)->first();
+        $kostum = nilaikostum::where('team_id', $team->id)->first();
+        $pasukan = nilaipasukan::where('team_id', $team->id)->first();
+        $variasi = nilaivariasi::where('team_id', $team->id)->first();
+
+        if($pbb){
+            $totalpbb = $pbb->materi_1 + $pbb->materi_2 + $pbb->materi_3 + $pbb->materi_4 + $pbb->materi_5 + $pbb->materi_6 + $pbb->materi_7 + $pbb->materi_8 + $pbb->materi_9 + $pbb->materi_10 + $pbb->materi_11 + $pbb->materi_12 + $pbb->materi_13 + $pbb->materi_14 + $pbb->materi_15 + $pbb->materi_16 + $pbb->materi_17 + $pbb->materi_18 + $pbb->materi_19 + $pbb->materi_20 + $pbb->materi_21 + $pbb->materi_22 + $pbb->materi_23 + $pbb->materi_24 + $pbb->materi_25 + $pbb->materi_26 + $pbb->materi_27 + $pbb->materi_28 + $pbb->materi_29;
+        }
+        if($danpas){
+            $totaldanpas = $danpas->materi_1 + $danpas->materi_2 + $danpas->materi_3 + $danpas->materi_4 + $danpas->materi_5;
+        }
+        if($formasi){
+            $totalformasi = $formasi->materi_1 + $formasi->materi_2 + $formasi->materi_3 + $formasi->materi_4 + $formasi->materi_5 + $formasi->materi_6;
+        }
+        if($gertam){
+            $totalgertam = $gertam->materi_1;
+        }
+        if($kostum){
+            $totalkostum = $kostum->materi_1 + $kostum->materi_2 + $kostum->materi_3 + $kostum->materi_4 + $kostum->materi_5;
+        }
+        if($pasukan){
+            $totalpasukan = $pasukan->materi_1 + $pasukan->materi_2 + $pasukan->materi_3 + $pasukan->materi_4 + $pasukan->materi_5;
+        }
+        if($variasi){
+            $totalvariasi = $variasi->materi_1 + $variasi->materi_2 + $variasi->materi_3 + $variasi->materi_4 + $variasi->materi_5;
+        }
+
         $totalTeams = Team::count(); // Mendapatkan total tim dari tabel "teams"
         $totalMembers = User::count();
         $lastTeam = Team::latest('created_at')->first();
         $lastUser = User::latest('created_at')->first();
 
         $teamVerified = Team::find(auth()->user()->team_id);
-    
-        return view('dashboard.rekapan-nilai', compact('totalTeams', 'totalMembers', 'lastUser', 'lastTeam', 'teamVerified'));
+
+        return view('dashboard.rekapan-nilai', compact('totalTeams', 'totalMembers', 'lastUser', 'lastTeam', 'teamVerified', 'team', 'pbb', 'danpas', 'formasi', 'gertam', 'kostum', 'pasukan', 'variasi', 'totalpbb', 'totaldanpas', 'totalformasi', 'totalgertam', 'totalkostum', 'totalpasukan', 'totalvariasi'));
     }
 
 

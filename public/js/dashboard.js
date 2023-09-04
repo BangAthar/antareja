@@ -49,3 +49,17 @@ btnOpenPopup.addEventListener('click', function() {
 btnClosePopup.addEventListener('click', function() {
   popup.classList.add('hidden');
 });
+
+// TAB CONTENT REKAP NILAI
+const tabButtons = document.querySelectorAll('.tab-button');
+const tabContents = document.querySelectorAll('.tab-content');
+
+tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const tabId = button.getAttribute('data-tab');
+        tabButtons.forEach(btn => btn.classList.remove('bg-red-700'));
+        tabContents.forEach(content => content.classList.add('hidden'));
+        button.classList.add('bg-red-700');
+        document.getElementById(tabId).classList.remove('hidden');
+    });
+});

@@ -59,7 +59,15 @@ Route::middleware(['auth', 'activated'])->group(function () {
         Route::get('/dashboard/data-peserta', [AdminController::class, 'datapeserta'])->name('data-peserta');
         Route::get('/dashboard/data-team', [AdminController::class, 'datateam'])->name('data-team');
         Route::post('/dashboard/data-team', [AdminController::class, 'teamverify'])->name('teamverify');
-        Route::view('/dashboard/rekapnilai-setting', 'dashboard.admin.rekap-setting');
+        Route::get('/dashboard/rekapnilai-setting', [AdminController::class, 'rekapnilaisetting'])->name('rekapnilaisetting');
+        Route::post('/dashboard/updatenilaipbb', [AdminController::class, 'updatenilaipbb'])->name('updatenilaipbb');
+        Route::post('/dashboard/updatenilaivariasi', [AdminController::class, 'updatenilaivariasi'])->name('updatenilaivariasi');
+        Route::post('/dashboard/updatenilaiformasi', [AdminController::class, 'updatenilaiformasi'])->name('updatenilaiformasi');
+        Route::post('/dashboard/updatenilaigertam', [AdminController::class, 'updatenilaigertam'])->name('updatenilaigertam');
+        Route::post('/dashboard/updatenilaidanpas', [AdminController::class, 'updatenilaidanpas'])->name('updatenilaidanpas');
+        Route::post('/dashboard/updatenilaipasukan', [AdminController::class, 'updatenilaipasukan'])->name('updatenilaipasukan');
+        Route::post('/dashboard/updatenilaikostum', [AdminController::class, 'updatenilaikostum'])->name('updatenilaikostum');
+        Route::post('/dashboard/unlocknilai', [AdminController::class, 'unlocknilai'])->name('unlocknilai');
     });
     
 });
@@ -77,5 +85,5 @@ Route::get('/register-team', [RegisterController::class, 'registeamindex'])->nam
 Route::post('/register-team', [RegisterController::class, 'registeamadd'])->name('registeamadd');
 
 
-// TEST ROUTE
+// TESgertam
 Route::view('/mt', 'maintenance');

@@ -11,6 +11,10 @@ class Team extends Model
         'team_name',
     ];
 
+    public function nilaipbb(){
+        return $this->hasOne(Nilaipbb::class, 'team_id');
+    }
+
     public function users()
     {
         return $this->hasMany(User::class, 'team_id');
