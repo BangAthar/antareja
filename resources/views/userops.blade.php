@@ -11,7 +11,7 @@
                         Daftarkan Team!
                     </a>
                     <a href="/register" class="bg-red-500 hover:bg-red-400 text-white font-medium shadow-nopal py-2 px-1 w-full text-center rounded focus:outline-none focus:shadow-outline mt-10">
-                        Daftar akun untuk masuk ke halaman aplikasi
+                        Daftar akun ke halaman aplikasi
                     </a>
                     <a href="/login" class="bg-red-500 hover:bg-red-400 text-white font-medium shadow-nopal py-2 px-1 w-full text-center rounded focus:outline-none focus:shadow-outline mt-10">
                         Login ke halaman aplikasi</a>
