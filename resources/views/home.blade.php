@@ -108,7 +108,7 @@
                         Antareja yang akan memperebutkan 70+ Tropi LKBB tingkat - Jawa Timur</p>
                     <p class="text-gray-700 text-lg md:text-xl font-medium mt-3 mb-10">Dengan hadirnya video ini, kami harap banyak
                         sekolah yang turut berpartisipasi dalam meramaikan LKBB Antareja Tingkat Jawa Timur</p>
-                    <a href="#" class="py-4 px-7 bg-red-500 rounded text-white shadow-lg transition ease"><i
+                    <a href="https://youtu.be/p94QaX4s9n8" target="_blank" class="py-4 px-7 bg-red-500 rounded text-white shadow-lg transition ease"><i
                             class="fa-solid fa-play text-lg md:text-xl"></i> Play</a>
                 </div>
                 <div class="container">
