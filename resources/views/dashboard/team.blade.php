@@ -163,6 +163,9 @@
                         <h6 class="text-blueGray-400 text-sm mt-3 mb-6 font-bold uppercase">
                             Informasi Team
                         </h6>
+                        @if (strtoupper($user->team_role) == 'PASUKAN')
+                        <div class="text-red-500 text-sm mt-[-20px] mb-6">*Hanya peserta dengan posisi official, danpas, dan pelatih yang dapat merubah Team Setting</div>
+                        @endif
                         <div class="flex flex-wrap">
                             <div class="w-full lg:w-6/12 px-4">
                                 <div class="relative w-full mb-3">
