@@ -61,7 +61,7 @@
                         </div>
                     </form>
                     <div class="text-center pt-4">
-                        Belum Punya Akun? Daftar akun untuk masuk ke halaman aplikasi <span class="text-red-400 underline"><a href="/register">Daftar Akun!</a></span>
+                        Belum Punya Akun? Daftar akun untuk masuk ke halaman aplikasi <span class="text-red-400 underline"><a href="/daftar-akun">Daftar Akun!</a></span>
                     </div>
                     <div class="text-center pt-4 text-gray-800">
                         Lupa password? <span class="text-red-400 underline"><a href="#" id="openPopup">Hubungi admin</a></span>

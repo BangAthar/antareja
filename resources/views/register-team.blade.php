@@ -66,7 +66,7 @@
                             </button>
                         </div>
                     </form>
-                    <div class="text-center pt-4 pb-8">Sudah punya team? Silahkan daftar akun untuk masuk ke halaman aplikasi <span class="text-red-400 underline"><a href="/register">Daftar akun</a></span></div>
+                    <div class="text-center pt-4 pb-8">Sudah punya team? Silahkan daftar akun untuk masuk ke halaman aplikasi <span class="text-red-400 underline"><a href="/daftar-akun">Daftar akun</a></span></div>
                 </div>
             </div>
         </div>

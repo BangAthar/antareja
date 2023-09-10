@@ -79,10 +79,10 @@ Route::get('/login', [LoginController::class, 'index'])->name('login')->Middlewa
 Route::post('/login', [LoginController::class, 'LoginAccount'])->name('LoginAccount');
 Route::post('/logout', [LoginController::class, 'LogoutAccount'])->name('LogoutAccount');
 
-Route::get('/register', [RegisterController::class, 'index'])->name('index')->Middleware('guest');
-Route::post('/register', [RegisterController::class, 'CreateAccount'])->name('CreateAccount');
-Route::get('/register-team', [RegisterController::class, 'registeamindex'])->name('registeamindex')->Middleware('guest');
-Route::post('/register-team', [RegisterController::class, 'registeamadd'])->name('registeamadd');
+Route::get('/daftar-akun', [RegisterController::class, 'index'])->name('index')->Middleware('guest');
+Route::post('/daftar-akun', [RegisterController::class, 'CreateAccount'])->name('CreateAccount');
+Route::get('/daftar-team', [RegisterController::class, 'registeamindex'])->name('registeamindex')->Middleware('guest');
+Route::post('/daftar-team', [RegisterController::class, 'registeamadd'])->name('registeamadd');
 
 
 // TESgertam

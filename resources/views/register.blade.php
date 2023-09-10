@@ -93,7 +93,7 @@
                         
                         <div class="text-center">
                             <button type="submit"
-                                class="bg-red-500 hover:bg-red-400 text-white font-medium py-2 w-full rounded focus:outline-none focus:shadow-outline">
+                                class="bg-red-500 hover:bg-red-400 text-white font-medium py-2 w-full rounded focus:outline-none focus:shadow-outline" onClick="return confirm('Apakah data yang anda masukan sudah benar?')">
                                 Daftar Akun
                             </button>
                         </div>
@@ -102,7 +102,7 @@
                         Sudah punya akun? Silahkan login untuk masuk ke halaman aplikasi <span class="text-red-400 underline"><a href="/login">Login</a></span>
                     </div>
                     <div class="text-center pt-2 pb-8">
-                        Belum memilik team? Silahkan daftar team untuk melakukan registrasi lomba <span class="text-red-400 underline"><a href="/register-team">Daftarkan Team</a></span>
+                        Belum memilik team? Silahkan daftar team untuk melakukan registrasi lomba <span class="text-red-400 underline"><a href="/daftar-team">Daftarkan Team</a></span>
                     </div>
                 </div>
             </div>

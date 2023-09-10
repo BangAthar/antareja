@@ -222,35 +222,44 @@
                     <div class="w-full mx-auto lg:mx-0 bg-white shadow rounded px-3 mt-2 pb-3">
                         <h2 class="text-xl font-semibold mb-4 mt-3">List Member</h2>
                         <h2 class="text-2xl font-semibold my-2">Cari data peserta</h2>
-                                <form action="{{ route('data-peserta') }}" method="GET" class="mb-1">
-                                    <input
-                                        type="text"
-                                        name="search"
-                                        class="w-full border p-2 rounded"
-                                        placeholder="Cari berdasarkan nama, nama tim, atau email..."
-                                        value="{{ request('search') }}"
-                                    />
-                                    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 mt-2">Cari</button>
-                                </form>
-                        <div class="bg-gray-200 rounded px-2 overflow-y-auto h-[655px] scrollbar">
-                            <ul class="divide-y divide-gray-300">
+                        <form action="{{ route('data-peserta') }}" method="GET" class="mb-1">
+                            <input
+                                type="text"
+                                name="search"
+                                class="w-full border p-2 rounded"
+                                placeholder="Cari berdasarkan nama, nama tim, atau email..."
+                                value="{{ request('search') }}"
+                            />
+                            <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700 mt-2">Cari</button>
+                        </form>
+                        <div class="bg-white shadow-md rounded p-4 mt-2 w-full overflow-y-auto">
+                            <ul class="divide-y divide-gray-300 h-[630px]">
+                                @php
+                                    $counter = 1;
+                                @endphp
                                 @foreach ($users as $user)    
-                                <li class="py-2">
-                                  <div class="flex flex-row justify-between px-2 items-center bg-red-500 text-white rounded shadow">
-                                    <div class="flex flex-col w-[70%]">
-                                        <span class="font-semibold pb-1">{{ $user->name }}</span>
-                                        <span class="">Role: {{ $user->team_role }}</span>
-                                        <span class="">Team: {{ $user->team->team_name }}</span>
+                                <li class="py-2 hover:bg-gray-100 transition duration-300 ease-in-out">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center space-x-2">
+                                            <div class="bg-red-500 text-white h-10 w-10 flex items-center justify-center rounded-full font-semibold text-xl">{{ $counter }}</div>
+                                            <div class="flex flex-col">
+                                                <span class="font-semibold text-lg">{{ $user->name }}</span>
+                                                <span class="text-gray-500">Role: {{ $user->team_role }}</span>
+                                                <span class="text-gray-500">Team: {{ $user->team->team_name }}</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex space-x-2">
+                                            <a href="/dashboard/data-peserta?peserta={{ $user->id }}" class="text-green-400 hover:text-green-600 transition duration-300 underline font-semibold">Lihat</a>
+                                            <a href="/dashboard/data-peserta?hapus={{ $user->id }}" onclick="return confirm('Apakah Anda yakin ingin menghapus user ini?')" class="text-red-900 hover:text-red-700 transition duration-300 underline font-semibold">Hapus</a>
+                                        </div>
                                     </div>
-                                    <div class="flex flex-col text-right">
-                                        <a href="/dashboard/data-peserta?peserta={{ $user->id }}" class="text-green-400 underline font-semibold pb-2">Lihat</a>
-                                        <a href="/dashboard/data-peserta?hapus={{ $user->id }}" onclick="return confirm('Apakah Anda yakin ingin menghapus user ini?')" class="text-red-900 underline font-semibold">Hapus</a>
-                                    </div>
-                                  </div>
                                 </li>
+                                @php
+                                    $counter++;
+                                @endphp
                                 @endforeach
                             </ul>
-                        </div>
+                        </div> 
                     </div>
                 </div>
             </div>

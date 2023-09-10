@@ -145,13 +145,31 @@
                     <div class="flex flex-wrap items-center">
                         <div class="relative w-full px-4 max-w-full flex-grow flex-1">
                             <h3 class="font-semibold text-base text-blueGray-700 uppercase">
-                                <i class="fa-solid fa-book mr-2"></i></i></i> JUKLAK LKBB ANTAREJA
+                                <i class="fa-solid fa-book mr-2"></i></i></i> JUKLAK LKBB ANTAREJA 2023
                             </h3>
                         </div>
                         <div class="relative w-full max-w-full mt-3">
                             <div class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
                                 <div class="w-full max-w-2xl">
                                     <embed src="https://drive.google.com/file/d/1F1LJXtnHjnt2Y3cpvgvOo5oSEWtVU0N1/preview" type="application/pdf" class="w-full h-screen"></embed>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
+                <div class="rounded-t mb-0 px-4 py-3 border-0">
+                    <div class="flex flex-wrap items-center">
+                        <div class="relative w-full px-4 max-w-full flex-grow flex-1">
+                            <h3 class="font-semibold text-base text-blueGray-700 uppercase">
+                                <i class="fa-solid fa-book mr-2"></i></i></i> PANDUAN WEB LKBB ANTAREJA 2023
+                            </h3>
+                        </div>
+                        <div class="relative w-full max-w-full mt-3">
+                            <div class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+                                <div class="w-full max-w-2xl">
+                                    <embed src="https://drive.google.com/file/d/15B3UpaQMYpTGX9iZIItTZCZ5E54kmnzO/preview" type="application/pdf" class="w-full h-screen"></embed>
                                 </div>
                               </div>
                         </div>

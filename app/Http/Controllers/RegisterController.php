@@ -138,6 +138,6 @@ class RegisterController extends Controller
 
         $team->save();
 
-        return redirect('/register')->with('success', 'Team berhasil didaftarkan ke sistem');
+        return redirect('/daftar-akun')->with('success', 'Team berhasil didaftarkan ke sistem');
     }
 }

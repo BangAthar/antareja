@@ -280,17 +280,22 @@
                             </form>
                             
                         </div>
-                        <div class=" mx-auto lg:mx-0 bg-white shadow rounded px-3 w-full mt-2 pb-3">
-                            <h2 class="text-xl font-semibold mb-4 mt-3">List Member</h2>
+                        <div class="bg-white rounded shadow-md p-4 w-full">
+                            <h2 class="text-2xl font-semibold mb-4">List Member</h2>
                             <ul class="divide-y divide-gray-300">
                                 @foreach ($teamMembers as $member)
-                                    <li class="py-2">
-                                        <div class="flex flex-row justify-between px-2 py-2 items-center bg-red-500 text-white rounded shadow">
-                                            <span class="font-semibold w-[50%]">{{ $member->name }}</span>
-                                            <span class="">Role: {{ $member->team_role }}</span>
-                                            <a href="{{ route('editMember', ['id' => $member->id]) }}" class="text-yellow-400 underline">Edit</a>
+                                <li class="py-2 transition duration-300 transform hover:scale-105 hover:shadow-lg">
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center space-x-2">
+                                            <div class="bg-red-500 text-white h-10 w-10 flex items-center justify-center rounded-full font-semibold text-xl">{{ substr($member->name, 0, 1) }}</div>
+                                            <div class="flex flex-col">
+                                                <span class="font-semibold text-lg">{{ $member->name }}</span>
+                                                <span class="text-gray-500">{{ $member->team_role }}</span>
+                                            </div>
                                         </div>
-                                    </li>
+                                        <a href="{{ route('editMember', ['id' => $member->id]) }}" class="text-yellow-400 hover:text-yellow-600 transition duration-300">Edit</a>
+                                    </div>
+                                </li>
                                 @endforeach
                             </ul>
                         </div>
