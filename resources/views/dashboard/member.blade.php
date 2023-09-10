@@ -285,7 +285,7 @@
                             <ul class="divide-y divide-gray-300">
                                 @foreach ($teamMembers as $member)
                                 <li class="py-2 transition duration-300 transform hover:scale-105 hover:shadow-lg">
-                                    <div class="flex items-center justify-between">
+                                    <div class="sm:flex items-center justify-between">
                                         <div class="flex items-center space-x-2">
                                             <div class="bg-red-500 text-white h-10 w-10 flex items-center justify-center rounded-full font-semibold text-xl">{{ substr($member->name, 0, 1) }}</div>
                                             <div class="flex flex-col">

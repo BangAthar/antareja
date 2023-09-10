@@ -220,11 +220,10 @@
                                 @endphp
                                 @foreach ($teams as $team)    
                                 <li class="py-2 hover:bg-gray-100 transition duration-300 ease-in-out">
-                                    <div class="flex items-center justify-between">
+                                    <div class="sm:flex items-center justify-between">
                                         <div class="flex items-center space-x-2">
-                                            <div class="bg-red-500 text-white h-10 w-10 flex items-center justify-center rounded-full font-semibold text-xl">{{ $counter }}</div>
                                             <div class="flex flex-col">
-                                                <span class="font-semibold text-lg">{{ $team->team_name }}</span>
+                                                <span class="font-semibold text-lg">{{ $counter }}. {{ $team->team_name }}</span>
                                                 <span class="text-gray-500">Sekolah: {{ $team->team_school }}</span>
                                             </div>
                                         </div>

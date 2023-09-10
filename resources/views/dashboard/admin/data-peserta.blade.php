@@ -239,6 +239,34 @@
                                 @endphp
                                 @foreach ($users as $user)    
                                 <li class="py-2 hover:bg-gray-100 transition duration-300 ease-in-out">
+                                    <div class="sm:flex items-center justify-between">
+                                        <div class="flex items-center space-x-2">
+                                            <div class="flex flex-col">
+                                                <span class="font-semibold text-lg">{{ $counter }}. {{ $user->name }}</span>
+                                                <span class="text-gray-500">Role: {{ $user->team_role }}</span>
+                                                <span class="text-gray-500">Team: {{ $user->team->team_name }}</span>
+                                            </div>
+                                        </div>
+                                        <div class="flex space-x-2">
+                                            <a href="/dashboard/data-peserta?peserta={{ $user->id }}" class="text-green-400 hover:text-green-600 transition duration-300 underline font-semibold">Lihat</a>
+                                            <a href="/dashboard/data-peserta?hapus={{ $user->id }}" onclick="return confirm('Apakah Anda yakin ingin menghapus user ini?')" class="text-red-900 hover:text-red-700 transition duration-300 underline font-semibold">Hapus</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                @php
+                                    $counter++;
+                                @endphp
+                                @endforeach
+                            </ul>
+                        </div>
+                        
+                        {{-- <div class="bg-white shadow-md rounded p-4 mt-2 w-full overflow-y-auto">
+                            <ul class="divide-y divide-gray-300 h-[630px]">
+                                @php
+                                    $counter = 1;
+                                @endphp
+                                @foreach ($users as $user)    
+                                <li class="py-2 hover:bg-gray-100 transition duration-300 ease-in-out">
                                     <div class="flex items-center justify-between">
                                         <div class="flex items-center space-x-2">
                                             <div class="bg-red-500 text-white h-10 w-10 flex items-center justify-center rounded-full font-semibold text-xl">{{ $counter }}</div>
@@ -259,7 +287,7 @@
                                 @endphp
                                 @endforeach
                             </ul>
-                        </div> 
+                        </div>  --}}
                     </div>
                 </div>
             </div>

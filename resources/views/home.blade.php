@@ -15,7 +15,7 @@
                     {{-- <a href="https://forms.gle/9qSU9jSyiEVAAs5K6"
                         class="px-4 py-4 bg-red-500 md:bg-white rounded font-medium shadow-xl transition ease text-white md:text-red-500 hover:bg-transparent hover:text-red-500 md:hover:text-white hover:outline outline-offset-2 outline-2">Daftar
                         Sekarang!</a> --}}
-                    <a href="/register-team"
+                    <a href="/daftar-team"
                         class="px-4 py-4 bg-red-500 md:bg-white rounded font-medium shadow-xl transition ease text-white md:text-red-500 hover:bg-transparent hover:text-red-500 md:hover:text-white hover:outline outline-offset-2 outline-2">Daftar
                         Sekarang!</a>
                 </div>
