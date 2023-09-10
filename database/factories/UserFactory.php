@@ -26,10 +26,12 @@ class UserFactory extends Factory
             },
             'name' => $this->faker->name,
             'sekolah' => $this->faker->company,
+            'team_name' => 'panitiaadmin',
             'email' => $this->faker->unique()->safeEmail,
-            'nomor_hp' => $this->faker->numerify('##########'),
+            'team_role' => 'PASUKAN',
             'password' => bcrypt('password'),
             'remember_token' => Str::random(10),
+            'is_activated' => '1',
             'is_admin' => false,
         ];
     }

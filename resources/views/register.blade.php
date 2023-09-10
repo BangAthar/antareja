@@ -51,7 +51,7 @@
                                 <div class="mb-4">
                                     <label for="email" class="block mb-1 text-md font-medium text-gray-700">Email</label>
                                     <input id="email" type="email" name="email" value="{{ old('email') }}" required
-                                        class="px-4 py-2 border border-gray-300 rounded w-full @error('email') border-red-500 @enderror" placeholder="masukan email tim anda">
+                                        class="px-4 py-2 border border-gray-300 rounded w-full @error('email') border-red-500 @enderror" placeholder="masukan email pribadi anda">
                                     @error('email')
                                     <span class="text-red-500 text-sm mt-1">{{ $message }}</span>
                                     @enderror
