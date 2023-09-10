@@ -202,8 +202,7 @@
                     </div>
                     <div class="w-full mx-auto lg:mx-0 bg-white shadow rounded px-3 mt-2 pb-3">
                         <h2 class="text-xl font-semibold mb-4 mt-3">List Teams</h2>
-                        <div class="bg-gray-200 rounded px-2 overflow-y-auto h-[720px] scrollbar">
-                            <h2 class="text-2xl font-semibold my-2">Cari data team</h2>
+                        <h2 class="text-2xl font-semibold my-2">Cari data team</h2>
                             <form action="{{ route('data-team') }}" method="GET" class="mb-1">
                                 <input
                                     type="text"
@@ -214,6 +213,7 @@
                                 />
                                 <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 mt-2">Cari</button>
                             </form>
+                        <div class="bg-gray-200 rounded px-2 overflow-y-auto h-[590px] scrollbar">  
                             <ul class="divide-y divide-gray-300">
                                 @foreach ($teams as $team)
                                 <li class="py-2">
