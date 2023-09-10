@@ -21,12 +21,8 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
-            'team_id' => function () {
-                return \App\Models\Team::factory()->create()->id;
-            },
+            'team_id' => '1',
             'name' => $this->faker->name,
-            'sekolah' => $this->faker->company,
-            'team_name' => 'panitiaadmin',
             'email' => $this->faker->unique()->safeEmail,
             'team_role' => 'PASUKAN',
             'password' => bcrypt('password'),

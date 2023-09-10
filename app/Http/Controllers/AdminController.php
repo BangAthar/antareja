@@ -64,9 +64,23 @@ class AdminController extends Controller
 
     // FUNGSI DASHBOARD ADMIN DATA PESERTA
     public function datapeserta(Request $request){
-        $users = User::with(['team'])->get();
+        $search = $request->input('search');
+
+        // Query dasar untuk mendapatkan data User dengan relasi ke Team
+        $query = User::with('team')->orderBy('name', 'asc');
+
         $userId = $request->input('peserta');
-        $showuser = User::find($userId);
+
+        // Jika ada kata kunci pencarian, tambahkan kondisi pencarian
+        if ($search) {
+            $query->where(function ($q) use ($search) {
+                $q->where('name', 'LIKE', '%' . $search . '%')
+                  ->orWhereHas('team', function ($teamQuery) use ($search) {
+                      $teamQuery->where('team_name', 'LIKE', '%' . $search . '%');
+                  })
+                  ->orWhere('email', 'LIKE', '%' . $search . '%');
+            });
+        }
 
         $userIddel = $request->input('hapus');
         if ($userIddel) {
@@ -74,15 +88,29 @@ class AdminController extends Controller
             $deluser->delete();
             return redirect()->route('data-peserta');
         }
-        // dd($users);
+
+        // Eksekusi query
+        $users = $query->get();
+
+        // Data untuk tampilan
+        $showuser = User::find($userId); 
         return view('dashboard.admin.data-peserta', compact('users', 'showuser'));
     }
 
     // FUNGSI DASHBOARD ADMIN DATA TEAM
     public function datateam(Request $request){
-        $teams = Team::all();
+        $search = $request->input('search');
         $teamId = $request->input('team');
-        $showteam = Team::find($teamId);
+        // Query dasar untuk mendapatkan data Team
+        $query = Team::orderBy('team_name', 'asc');
+
+        // Jika ada kata kunci pencarian, tambahkan kondisi pencarian
+        if ($search) {
+            $query->where(function ($q) use ($search) {
+                $q->where('team_name', 'LIKE', '%' . $search . '%')
+                  ->orWhere('team_school', 'LIKE', '%' . $search . '%');
+            });
+        }
 
         $teamIddel = $request->input('hapus');
         if ($teamIddel) {
@@ -91,6 +119,11 @@ class AdminController extends Controller
             return redirect()->route('data-team');
         }
 
+        // Eksekusi query
+        $teams = $query->get();
+
+        // Data untuk tampilan
+        $showteam = Team::find($teamId); // Anda dapat mempertahankan ini jika diperlukan
         return view('dashboard.admin.data-team', compact('teams', 'showteam'));
     }
 

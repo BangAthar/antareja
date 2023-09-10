@@ -21,5 +21,6 @@ class DatabaseSeeder extends Seeder
         Team::create([
             'team_name' => 'panitiaadmin',
         ]);
+        User::factory(10)->create();
     }
 }
