@@ -12,7 +12,11 @@
                 </div>
             </div>
             <div class="w-full md:w-8/12 px-4">
+                
                 <ul class="flex flex-wrap list-none md:justify-end justify-center">
+                    <div class="text-sm text-blueGray-500 font-semibold py-1 text-center md:text-left">
+                        Antareja V2.6.2
+                    </div>
                     <li>
                         <a href="/#home"
                             class="text-blueGray-600 hover:text-blueGray-800 text-sm font-semibold block py-1 px-3">
