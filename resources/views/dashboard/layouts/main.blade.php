@@ -92,11 +92,7 @@
                         <a class="text-blueGray-500 block" href="#main"
                             onclick="openDropdown(event,'user-responsive-dropdown')">
                             <div class="items-center flex">
-                                <span
-                                    class="w-12 h-12 text-sm text-white bg-blueGray-200 inline-flex items-center justify-center rounded-full">
-                                    <img alt="guest icon" class="w-full rounded-full align-middle border-none shadow-lg"
-                                        src="{{ asset('img/guest.png') }}" />
-                                </span>
+                                <div class="bg-red-500 text-white h-10 w-10 flex items-center justify-center rounded-full font-semibold text-xl">{{ substr(auth()->user()->name, 0, 1) }}</div>
                             </div>
                         </a>
                         <div
@@ -262,11 +258,7 @@
                         <a class="text-blueGray-500 block" href="#main"
                             onclick="openDropdown(event,'user-dropdown')">
                             <div class="items-center flex">
-                                <span
-                                    class="w-12 h-12 text-sm text-white bg-blueGray-200 inline-flex items-center justify-center rounded-full">
-                                    <img alt="guest icon"
-                                        class="w-full rounded-full align-middle border-none shadow-lg"src="{{ asset('img/guest.png') }}" />
-                                </span>
+                                <div class="bg-white text-red-500 h-10 w-10 flex items-center justify-center rounded-full font-semibold text-xl">{{ substr(auth()->user()->name, 0, 1) }}</div>
                             </div>
                         </a>
                         <div class="hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48"
