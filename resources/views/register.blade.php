@@ -33,7 +33,7 @@
                                 <div class="mb-4">
                                     <label for="name" class="block mb-1 text-md font-medium text-gray-700">Nama Lengkap</label>
                                     <input id="name" type="text" name="name" value="{{ old('name') }}" required autofocus
-                                        class="px-4 py-2 border border-gray-300 rounded w-full @error('name') border-red-500 @enderror" placeholder="Masukan nama tim anda">
+                                        class="px-4 py-2 border border-gray-300 rounded w-full @error('name') border-red-500 @enderror" placeholder="Masukan nama lengkap anda">
                                     @error('name')
                                     <span class="text-red-500 text-sm mt-1">{{ $message }}</span>
                                     @enderror
