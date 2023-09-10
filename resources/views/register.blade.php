@@ -40,12 +40,23 @@
                                 </div>
         
                                 <div class="mb-4">
-                                    <label for="team_name" class="block mb-1 text-md font-medium text-gray-700">Nama Team</label>
-                                    <input id="team_name" type="text" name="team_name" value="{{ old('team_name') }}" required autofocus
-                                        class="px-4 py-2 border border-gray-300 rounded w-full @error('team_name') border-red-500 @enderror" placeholder="Masukan nama tim anda">
+                                    <label for="team_name" class="block mb-1 text-md font-medium text-gray-700">Nama team</label>
+                                    <div class="relative">
+                                        <select id="team_name" name="team_name" class="border border-gray-300 rounded-md px-4 py-2 w-full appearance-none">
+                                            @foreach ($teams as $team)
+                                                @if (!($team->id === 1 && $team->team_name === 'panitiaadmin'))
+                                                    <option value="{{ $team->team_name }}">{{ $team->team_name }}</option>
+                                                @endif
+                                            @endforeach
+                                        </select>
+                                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                        </div>
+                                    </div>
                                     @error('team_name')
-                                    <span class="text-red-500 text-sm mt-1">Team anda belum terdaftar, silahkan melakukan pendaftaran team untuk bisa daftar akun!</span>
+                                        <span class="text-red-500 text-sm mt-1">Team anda belum terdaftar, silahkan melakukan pendaftaran team untuk bisa daftar akun!</span>
                                     @enderror
+                                    <span class="text-black text-sm mt-1">Jika nama team tidak tersedia silahkan <a href="/daftar-team" class="text-red-400 underline">daftar team</a></span>
                                 </div>
                                 
                                 <div class="mb-4">

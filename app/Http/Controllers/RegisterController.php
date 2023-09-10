@@ -21,7 +21,9 @@ class RegisterController extends Controller
 {
     public function index()
     {
-        return view('register');
+        $teams = Team::all();
+
+        return view('register', compact('teams'));
     }
     public function CreateAccount(Request $request)
     {
