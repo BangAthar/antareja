@@ -143,37 +143,26 @@
             <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
                 <div class="rounded-t mb-0 px-4 py-3 border-0">
                     <div class="flex flex-wrap items-center">
-                        <div class="relative w-full px-4 max-w-full flex-grow flex-1">
-                            <h3 class="font-semibold text-base text-blueGray-700 uppercase">
-                                <i class="fa-solid fa-book mr-2"></i>JUKLAK LKBB ANTAREJA 2023
-                            </h3>
-                        </div>
-                        <div class="relative w-full max-w-full mt-3">
-                            <div class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-                                <div class="w-full max-w-2xl">
-                                    <embed src="https://drive.google.com/file/d/1F1LJXtnHjnt2Y3cpvgvOo5oSEWtVU0N1/preview" type="application/pdf" class="w-full h-screen"></embed>
-                                </div>
-                              </div>
-                        </div>
+                        <h2 class="text-2xl font-semibold text-gray-800"><i class="fa-solid fa-photo-film mr-2 "></i> Galeri Media Antareja</h2>
                     </div>
                 </div>
-            </div>
-            <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
-                <div class="rounded-t mb-0 px-4 py-3 border-0">
-                    <div class="flex flex-wrap items-center">
-                        <div class="relative w-full px-4 max-w-full flex-grow flex-1">
-                            <h3 class="font-semibold text-base text-blueGray-700 uppercase">
-                                <i class="fa-solid fa-book mr-2"></i> PANDUAN WEB LKBB ANTAREJA 2023
-                            </h3>
-                        </div>
-                        <div class="relative w-full max-w-full mt-3">
-                            <div class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-                                <div class="w-full max-w-2xl">
-                                    <embed src="https://drive.google.com/file/d/15B3UpaQMYpTGX9iZIItTZCZ5E54kmnzO/preview" type="application/pdf" class="w-full h-screen"></embed>
+                <div class="px-4 py-3">
+                    
+                    <div class="grid sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+                        @foreach ($teams as $team)
+                        <div class="bg-white border rounded-lg overflow-hidden shadow-lg hover:shadow-xl cursor-pointer hover:bg-red-100 hover:scale-105 transition-all">
+                            <a href="#">
+                                <img src="{{ asset('img/tidak-ada.jpg') }}" alt="Sekolah 1" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="text-xl font-semibold text-gray-800 mb-2 hover:underline lowercase">{{ $team->team_name }}</h3>
+                                    <p class="text-gray-600">{{ $team->team_school }}</p>
+                                    <p class="text-gray-600">40 Foto </p>
                                 </div>
-                              </div>
-                        </div>
+                            </a>
+                        </div> 
+                        @endforeach
                     </div>
+
                 </div>
             </div>
         </div>
@@ -181,5 +170,4 @@
     @include('partials.footer')
 </div>
 @endif
-
 @endsection

@@ -42,15 +42,13 @@ Route::middleware(['verifieduser'])->group(function () {
 Route::middleware(['auth', 'activated'])->group(function () {
     // AUTH ROUTE
     Route::get('/dashboard', [AuthController::class, 'dashindex'])->name('main.dashboard');
-
     Route::get('/dashboard/team-setting', [AuthController::class, 'teamSetting'])->name('team-setting');
     Route::post('/dashboard/team-setting', [AuthController::class, 'EditTeamSetting'])->name('EditTeamSetting');
-    
     Route::post('/dashboard/member-setting/{id}/update', [AuthController::class, 'updateMember'])->name('updateMember');
     Route::get('/dashboard/member-setting/{id?}', [AuthController::class, 'editMember'])->name('editMember');
-
     Route::get('/dashboard/informasi', [AuthController::class, 'informasi'])->name('informasi');
     Route::get('/dashboard/buku-panduan', [AuthController::class, 'bukuPanduan'])->name('bukuPanduan');
+    // Route::get('/dashboard/galeri-media', [AuthController::class, 'galeriMedia'])->name('galeriMedia');
     Route::get('/dashboard/rekapan-nilai', [AuthController::class, 'rekapanNilai'])->name('rekapanNilai');
 
     Route::group(['middleware' => 'admin'], function(){

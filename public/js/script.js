@@ -49,12 +49,6 @@ btnClosePopup.addEventListener('click', function() {
   popup.classList.add('hidden');
 });
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     // Semua konten website selesai dimuat
-//     // Sembunyikan preloader
-//     document.getElementById("preloader").classList.add('hidden');
-// });
-
 function showFileName(input) {
     const fileNameSpan = document.getElementById('file-name');
     if (input.files && input.files.length > 0) {

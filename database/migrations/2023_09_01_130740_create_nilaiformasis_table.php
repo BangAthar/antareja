@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('materi_4')->default('0');
             $table->string('materi_5')->default('0');
             $table->string('materi_6')->default('0');
+            $table->string('materi_7')->default('0');
             $table->timestamps();
         });
     }

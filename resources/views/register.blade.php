@@ -53,9 +53,6 @@
                                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                         </div>
                                     </div>
-                                    @error('team_name')
-                                        <span class="text-red-500 text-sm mt-1">Team anda belum terdaftar, silahkan melakukan pendaftaran team untuk bisa daftar akun!</span>
-                                    @enderror
                                     <span class="text-black text-sm mt-1">Jika nama team tidak tersedia silahkan <a href="/daftar-team" class="text-red-400 underline">daftar team</a></span>
                                 </div>
                                 

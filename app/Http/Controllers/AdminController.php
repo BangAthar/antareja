@@ -147,7 +147,6 @@ class AdminController extends Controller
         $showvariasi = nilaivariasi::where('team_id', $teamId)->first();
         $showpasukan = nilaipasukan::where('team_id', $teamId)->first();
         $showkostum = nilaikostum::where('team_id', $teamId)->first();
-        $showgertam = nilaigertam::where('team_id', $teamId)->first();
         $showdanpas = nilaidanpas::where('team_id', $teamId)->first();
         $showformasi = nilaiformasi::where('team_id', $teamId)->first();
 
@@ -155,18 +154,17 @@ class AdminController extends Controller
         $totalvariasi = 0;
         $totalpasukan = 0;
         $totalkostum = 0;
-        $totalgertam = 0;
         $totaldanpas = 0;
         $totalformasi = 0;
 
         if ($showpbb) {
-            for ($i = 1; $i <= 29; $i++) {
+            for ($i = 1; $i <= 31; $i++) {
                 $field = 'materi_' . $i;
                 $totalpbb += $showpbb->$field;
             }
         }
         if ($showvariasi) {
-            for ($i = 1; $i <= 5; $i++) {
+            for ($i = 1; $i <= 6; $i++) {
                 $field = 'materi_' . $i;
                 $totalvariasi += $showvariasi->$field;
             }
@@ -183,12 +181,6 @@ class AdminController extends Controller
                 $totalkostum += $showkostum->$field;
             }
         }
-        if ($showgertam) {
-            for ($i = 1; $i <= 1; $i++) {
-                $field = 'materi_' . $i;
-                $totalgertam += $showgertam->$field;
-            }
-        }
         if ($showdanpas) {
             for ($i = 1; $i <= 5; $i++) {
                 $field = 'materi_' . $i;
@@ -196,22 +188,22 @@ class AdminController extends Controller
             }
         }
         if ($showformasi) {
-            for ($i = 1; $i <= 6; $i++) {
+            for ($i = 1; $i <= 7; $i++) {
                 $field = 'materi_' . $i;
                 $totalformasi += $showformasi->$field;
             }
         }
 
-        $allpoint = $totalpbb + $totalvariasi + $totalpasukan + $totalkostum + $totalgertam + $totaldanpas + $totalformasi;
+        $allpoint = $totalpbb + $totalvariasi + $totalpasukan + $totalkostum + $totaldanpas + $totalformasi;
         
 
-        return view('dashboard.admin.rekap-setting', compact('teams', 'showteam', 'showpbb', 'showvariasi', 'showpasukan', 'showkostum', 'showgertam', 'showdanpas', 'showformasi', 'totalpbb', 'totalvariasi', 'totalpasukan', 'totalkostum', 'totalgertam', 'totaldanpas', 'totalformasi', 'allpoint'));
+        return view('dashboard.admin.rekap-setting', compact('teams', 'showteam', 'showpbb', 'showvariasi', 'showpasukan', 'showkostum', 'showdanpas', 'showformasi', 'totalpbb', 'totalvariasi', 'totalpasukan', 'totalkostum', 'totaldanpas', 'totalformasi', 'allpoint'));
     }
 
     public function updatenilaipbb(Request $request){
         $validatedData = $request->validate(
             [
-                'materi_1' => 'required','materi_2' => 'required','materi_3' => 'required','materi_4' => 'required','materi_5' => 'required','materi_6' => 'required','materi_7' => 'required','materi_8' => 'required','materi_9' => 'required','materi_10' => 'required','materi_11' => 'required','materi_12' => 'required','materi_13' => 'required','materi_14' => 'required','materi_15' => 'required','materi_16' => 'required','materi_17' => 'required','materi_18' => 'required','materi_19' => 'required','materi_20' => 'required','materi_21' => 'required','materi_22' => 'required','materi_23' => 'required','materi_24' => 'required','materi_25' => 'required','materi_26' => 'required','materi_27' => 'required','materi_28' => 'required','materi_29' => 'required',
+                'materi_1' => 'required','materi_2' => 'required','materi_3' => 'required','materi_4' => 'required','materi_5' => 'required','materi_6' => 'required','materi_7' => 'required','materi_8' => 'required','materi_9' => 'required','materi_10' => 'required','materi_11' => 'required','materi_12' => 'required','materi_13' => 'required','materi_14' => 'required','materi_15' => 'required','materi_16' => 'required','materi_17' => 'required','materi_18' => 'required','materi_19' => 'required','materi_20' => 'required','materi_21' => 'required','materi_22' => 'required','materi_23' => 'required','materi_24' => 'required','materi_25' => 'required','materi_26' => 'required','materi_27' => 'required','materi_28' => 'required','materi_29' => 'required', 'materi_30' => 'required', 'materi_31' => 'required',
             ]
         );
         
@@ -220,7 +212,7 @@ class AdminController extends Controller
             return back()->with('error', 'Tim tidak ditemukan.');
         }
 
-        for ($i = 1; $i <= 29; $i++) {
+        for ($i = 1; $i <= 31; $i++) {
             $field = 'materi_' . $i;
             $nilai->$field = $request->$field;
         }
@@ -233,32 +225,11 @@ class AdminController extends Controller
     public function updatenilaivariasi(Request $request){
         $validatedData = $request->validate(
             [
-                'materi_1' => 'required','materi_2' => 'required','materi_3' => 'required','materi_4' => 'required','materi_5' => 'required',
+                'materi_1' => 'required','materi_2' => 'required','materi_3' => 'required','materi_4' => 'required','materi_5' => 'required','materi_6' => 'required',
             ]
         );
         
         $nilai = nilaivariasi::where('team_id', $request->team)->first();
-        if (!$nilai) {
-            return back()->with('error', 'Tim tidak ditemukan.');
-        }
-
-        for ($i = 1; $i <= 5; $i++) {
-            $field = 'materi_' . $i;
-            $nilai->$field = $request->$field;
-        }
-        
-        $nilai->save($validatedData);
-
-        return back()->with('success', 'Nilai VARIASI berhasil diupdate');
-    }
-    public function updatenilaiformasi(Request $request){
-        $validatedData = $request->validate(
-            [
-                'materi_1' => 'required','materi_2' => 'required','materi_3' => 'required','materi_4' => 'required','materi_5' => 'required', 'materi_6' => 'required'
-            ]
-        );
-        
-        $nilai = nilaiformasi::where('team_id', $request->team)->first();
         if (!$nilai) {
             return back()->with('error', 'Tim tidak ditemukan.');
         }
@@ -270,28 +241,28 @@ class AdminController extends Controller
         
         $nilai->save($validatedData);
 
-        return back()->with('success', 'Nilai FORMASI berhasil diupdate');
+        return back()->with('success', 'Nilai VARIASI berhasil diupdate');
     }
-    public function updatenilaigertam(Request $request){
+    public function updatenilaiformasi(Request $request){
         $validatedData = $request->validate(
             [
-                'materi_1' => 'required',
+                'materi_1' => 'required','materi_2' => 'required','materi_3' => 'required','materi_4' => 'required','materi_5' => 'required', 'materi_6' => 'required' ,'materi_7' => 'required'
             ]
         );
         
-        $nilai = nilaigertam::where('team_id', $request->team)->first();
+        $nilai = nilaiformasi::where('team_id', $request->team)->first();
         if (!$nilai) {
             return back()->with('error', 'Tim tidak ditemukan.');
         }
 
-        for ($i = 1; $i <= 1; $i++) {
+        for ($i = 1; $i <= 7; $i++) {
             $field = 'materi_' . $i;
             $nilai->$field = $request->$field;
         }
         
         $nilai->save($validatedData);
 
-        return back()->with('success', 'Nilai GERAKAN TAMBAHAN berhasil diupdate');
+        return back()->with('success', 'Nilai FORMASI berhasil diupdate');
     }
     public function updatenilaidanpas(Request $request){
         $validatedData = $request->validate(
@@ -371,9 +342,6 @@ class AdminController extends Controller
         $nilaiformasi = new nilaiformasi();
         $nilaiformasi->team_id = $teamId;
         $nilaiformasi->save();
-        $nilaigertam = new nilaigertam();
-        $nilaigertam->team_id = $teamId;
-        $nilaigertam->save();
         $nilaikostum = new nilaikostum();
         $nilaikostum->team_id = $teamId;
         $nilaikostum->save();

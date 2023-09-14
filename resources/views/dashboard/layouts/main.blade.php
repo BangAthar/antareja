@@ -180,6 +180,14 @@
                                 Buku Panduan
                             </a>
                         </li>
+                        {{-- <li class="items-center">
+                            <a href="/dashboard/galeri-media"
+                                class="text-xs uppercase py-3 font-bold block {{ Request::is('dashboard/galeri-media') ? 'text-red-500 hover:text-red-700' : 'text-blueGray-700 hover:text-blueGray-500' }}">
+                                <i
+                                    class="fa-solid fa-photo-film mr-2 text-sm {{ Request::is('dashboard/galeri-media') ? '' : 'text-blueGray-300' }}"></i>
+                                Galeri Media
+                            </a>
+                        </li> --}}
 
                         <li class="items-center">
                             <a href="/dashboard/rekapan-nilai"

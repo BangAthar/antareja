@@ -166,9 +166,6 @@
                                 <button class="px-5 py-2 md:px-10 md:py-2 mt-2 rounded shadow-md text-white font-medium hover:bg-red-700 transition-all bg-red-500 tab-button" data-tab="formasi">
                                     FORMASI
                                 </button>
-                                <button class="px-5 py-2 md:px-10 md:py-2 mt-2 rounded shadow-md text-white font-medium hover:bg-red-700 transition-all bg-red-500 tab-button" data-tab="gerakan_tambahan">
-                                    GERAKAN TAMBAHAN
-                                </button>
                                 <button class="px-5 py-2 md:px-10 md:py-2 mt-2 rounded shadow-md text-white font-medium hover:bg-red-700 transition-all bg-red-500 tab-button" data-tab="danpas">
                                     DANPAS
                                 </button>
@@ -290,7 +287,7 @@
                                                         </td>
                                                         <td class="px-6 py-4">
                                                             <div class="whitespace-normal break-words">
-                                                                Tiap-tiap Banjar 2 kali belok kiri
+                                                                Tiap-tiap Banjar 2 kali belok kanan
                                                             </div>
                                                         </td>
                                                         <td class="px-6 py-4 whitespace-nowrap">
@@ -446,7 +443,7 @@
                                                         </td>
                                                         <td class="px-6 py-4">
                                                             <div class="whitespace-normal break-words">
-                                                                Hormat tangan
+                                                                Hormat
                                                             </div>
                                                         </td>
                                                         <td class="px-6 py-4 whitespace-nowrap">
@@ -472,7 +469,7 @@
                                                         </td>
                                                         <td class="px-6 py-4">
                                                             <div class="whitespace-normal break-words">
-                                                                Istirahat ditempat (parade) ke sikap sempurna
+                                                                Istirahat ditempat
                                                             </div>
                                                         </td>
                                                         <td class="px-6 py-4 whitespace-nowrap">
@@ -485,7 +482,7 @@
                                                         </td>
                                                         <td class="px-6 py-4">
                                                             <div class="whitespace-normal break-words">
-                                                                Periksa kerapian
+                                                                Sikap sempurna
                                                             </div>
                                                         </td>
                                                         <td class="px-6 py-4 whitespace-nowrap">
@@ -498,7 +495,7 @@
                                                         </td>
                                                         <td class="px-6 py-4">
                                                             <div class="whitespace-normal break-words">
-                                                                Sikap sempurna
+                                                                Istirahat ditempat (parade)
                                                             </div>
                                                         </td>
                                                         <td class="px-6 py-4 whitespace-nowrap">
@@ -511,7 +508,7 @@
                                                         </td>
                                                         <td class="px-6 py-4">
                                                             <div class="whitespace-normal break-words">
-                                                                Hadap serong kiri
+                                                                Periksa kerapian
                                                             </div>
                                                         </td>
                                                         <td class="px-6 py-4 whitespace-nowrap">
@@ -524,7 +521,7 @@
                                                         </td>
                                                         <td class="px-6 py-4">
                                                             <div class="whitespace-normal break-words">
-                                                                4 langkah ke belakang
+                                                                Sikap sempurna
                                                             </div>
                                                         </td>
                                                         <td class="px-6 py-4 whitespace-nowrap">
@@ -537,7 +534,7 @@
                                                         </td>
                                                         <td class="px-6 py-4">
                                                             <div class="whitespace-normal break-words">
-                                                                3 langkah ke kiri
+                                                                Setengah lengan lencang kiri
                                                             </div>
                                                         </td>
                                                         <td class="px-6 py-4 whitespace-nowrap">
@@ -550,7 +547,7 @@
                                                         </td>
                                                         <td class="px-6 py-4">
                                                             <div class="whitespace-normal break-words">
-                                                                Hadap serong kanan
+                                                                Lencang kanan
                                                             </div>
                                                         </td>
                                                         <td class="px-6 py-4 whitespace-nowrap">
@@ -563,7 +560,7 @@
                                                         </td>
                                                         <td class="px-6 py-4">
                                                             <div class="whitespace-normal break-words">
-                                                                Setengah lengan lencang kiri
+                                                                Hadap serong kiri
                                                             </div>
                                                         </td>
                                                         <td class="px-6 py-4 whitespace-nowrap">
@@ -576,11 +573,37 @@
                                                         </td>
                                                         <td class="px-6 py-4">
                                                             <div class="whitespace-normal break-words">
-                                                                Lencang kanan
+                                                                4 langkah ke belakang
                                                             </div>
                                                         </td>
                                                         <td class="px-6 py-4 whitespace-nowrap">
                                                             {{ $pbb->materi_29 }}
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="px-6 py-4 whitespace-nowrap">
+                                                            30
+                                                        </td>
+                                                        <td class="px-6 py-4">
+                                                            <div class="whitespace-normal break-words">
+                                                                3 langkah ke kiri
+                                                            </div>
+                                                        </td>
+                                                        <td class="px-6 py-4 whitespace-nowrap">
+                                                            {{ $pbb->materi_30 }}
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="px-6 py-4 whitespace-nowrap">
+                                                            31
+                                                        </td>
+                                                        <td class="px-6 py-4">
+                                                            <div class="whitespace-normal break-words">
+                                                                hadap serong kanan
+                                                            </div>
+                                                        </td>
+                                                        <td class="px-6 py-4 whitespace-nowrap">
+                                                            {{ $pbb->materi_31 }}
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -633,7 +656,7 @@
                                                         </td>
                                                         <td class="px-6 py-4">
                                                             <div class="whitespace-normal break-words">
-                                                                Kreativitas
+                                                                Kerapihan dan detail gerakan
                                                             </div>
                                                         </td>
                                                         <td class="px-6 py-4 whitespace-nowrap">
@@ -646,7 +669,7 @@
                                                         </td>
                                                         <td class="px-6 py-4">
                                                             <div class="whitespace-normal break-words">
-                                                                Kerapian shaf dan banjar
+                                                                Konsentrasi
                                                             </div>
                                                         </td>
                                                         <td class="px-6 py-4 whitespace-nowrap">
@@ -659,7 +682,7 @@
                                                         </td>
                                                         <td class="px-6 py-4">
                                                             <div class="whitespace-normal break-words">
-                                                                Kekompakan dan keseragaman
+                                                                Kreativitas
                                                             </div>
                                                         </td>
                                                         <td class="px-6 py-4 whitespace-nowrap">
@@ -672,7 +695,7 @@
                                                         </td>
                                                         <td class="px-6 py-4">
                                                             <div class="whitespace-normal break-words">
-                                                                Tema dan konsep
+                                                                Pembawa gerakan
                                                             </div>
                                                         </td>
                                                         <td class="px-6 py-4 whitespace-nowrap">
@@ -685,11 +708,24 @@
                                                         </td>
                                                         <td class="px-6 py-4">
                                                             <div class="whitespace-normal break-words">
-                                                                Semangat
+                                                                Orasi
                                                             </div>
                                                         </td>
                                                         <td class="px-6 py-4 whitespace-nowrap">
                                                             {{ $variasi->materi_5 }}
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="px-6 py-4 whitespace-nowrap">
+                                                            6
+                                                        </td>
+                                                        <td class="px-6 py-4">
+                                                            <div class="whitespace-normal break-words">
+                                                                Tema dan konsep gerakan
+                                                            </div>
+                                                        </td>
+                                                        <td class="px-6 py-4 whitespace-nowrap">
+                                                            {{ $variasi->materi_6 }}
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -742,7 +778,7 @@
                                                         </td>
                                                         <td class="px-6 py-4">
                                                             <div class="whitespace-normal break-words">
-                                                                Proses buka formasi
+                                                                Kerapihan dan detail gerakan
                                                             </div>
                                                         </td>
                                                         <td class="px-6 py-4 whitespace-nowrap">
@@ -755,7 +791,7 @@
                                                         </td>
                                                         <td class="px-6 py-4">
                                                             <div class="whitespace-normal break-words">
-                                                                Kreativitas gerakan
+                                                                Kreativitas, konfigurasi gerakan
                                                             </div>
                                                         </td>
                                                         <td class="px-6 py-4 whitespace-nowrap">
@@ -768,7 +804,7 @@
                                                         </td>
                                                         <td class="px-6 py-4">
                                                             <div class="whitespace-normal break-words">
-                                                                Penggunaan lapangan
+                                                                Pembawa gerakan
                                                             </div>
                                                         </td>
                                                         <td class="px-6 py-4 whitespace-nowrap">
@@ -781,7 +817,7 @@
                                                         </td>
                                                         <td class="px-6 py-4">
                                                             <div class="whitespace-normal break-words">
-                                                                Proses tutup formasi
+                                                                Orasi
                                                             </div>
                                                         </td>
                                                         <td class="px-6 py-4 whitespace-nowrap">
@@ -794,7 +830,7 @@
                                                         </td>
                                                         <td class="px-6 py-4">
                                                             <div class="whitespace-normal break-words">
-                                                                Semangat
+                                                                Unsur PBB
                                                             </div>
                                                         </td>
                                                         <td class="px-6 py-4 whitespace-nowrap">
@@ -807,11 +843,24 @@
                                                         </td>
                                                         <td class="px-6 py-4">
                                                             <div class="whitespace-normal break-words">
-                                                                Unsur PBB
+                                                                Alur buka dan tutup formasi
                                                             </div>
                                                         </td>
                                                         <td class="px-6 py-4 whitespace-nowrap">
                                                             {{ $formasi->materi_6 }}
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="px-6 py-4 whitespace-nowrap">
+                                                            7
+                                                        </td>
+                                                        <td class="px-6 py-4">
+                                                            <div class="whitespace-normal break-words">
+                                                                Tema dan konsep gerakan
+                                                            </div>
+                                                        </td>
+                                                        <td class="px-6 py-4 whitespace-nowrap">
+                                                            {{ $formasi->materi_7 }}
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -822,63 +871,6 @@
                             </div>
                             @else
                             <div class="flex flex-col mt-2 tab-content hidden" id="formasi">
-                                <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-                                    <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-                                        <div class="shadow-md overflow-hidden border border-red-200 rounded-lg">
-                                            DATA BELUM DIMASUKAN OLEH PANITIA
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            @endif
-
-                            @if ($gertam)
-                            <div class="flex flex-col mt-2 tab-content hidden" id="gerakan_tambahan">
-                                <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-                                    <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-                                        <div class="px-2 py-2 text-center text-white font-semibold bg-indigo-500 rounded mb-2">
-                                            Total Point Penilaian GERAKAN TAMBAHAN : {{ number_format($totalgertam, 0) }}
-                                        </div>
-                                        <div class="shadow-md overflow-hidden border border-red-200 rounded-lg">
-                                            <table class="min-w-full divide-y divide-red-200">
-                                                <thead class="bg-red-300">
-                                                    <tr>
-                                                        <th scope="col"
-                                                            class="px-6 py-3 text-left text-md font-medium text-gray-600 uppercase tracking-wider">
-                                                            No
-                                                        </th>
-                                                        <th scope="col"
-                                                            class="px-6 py-3 text-left text-md font-medium text-gray-600 uppercase tracking-wider">
-                                                            Materi
-                                                        </th>
-                                                        <th scope="col"
-                                                            class="px-6 py-3 text-left text-md font-medium text-gray-600 uppercase tracking-wider">
-                                                            Point
-                                                        </th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody class="bg-white divide-y divide-red-200">
-                                                    <tr>
-                                                        <td class="px-6 py-4 whitespace-nowrap">
-                                                            1
-                                                        </td>
-                                                        <td class="px-6 py-4">
-                                                            <div class="whitespace-normal break-words">
-                                                                Bubar
-                                                            </div>
-                                                        </td>
-                                                        <td class="px-6 py-4 whitespace-nowrap">
-                                                            {{ $gertam->materi_1 }}
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            @else
-                            <div class="flex flex-col mt-2 tab-content hidden" id="gerakan_tambahan">
                                 <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                                     <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
                                         <div class="shadow-md overflow-hidden border border-red-200 rounded-lg">
@@ -934,7 +926,7 @@
                                                         </td>
                                                         <td class="px-6 py-4">
                                                             <div class="whitespace-normal break-words">
-                                                                Ketegasan dan kelantangan
+                                                                Intonasi dan artikulasi
                                                             </div>
                                                         </td>
                                                         <td class="px-6 py-4 whitespace-nowrap">
@@ -947,7 +939,7 @@
                                                         </td>
                                                         <td class="px-6 py-4">
                                                             <div class="whitespace-normal break-words">
-                                                                Intonasi
+                                                                Ketegasan dan kelantangan
                                                             </div>
                                                         </td>
                                                         <td class="px-6 py-4 whitespace-nowrap">
@@ -960,7 +952,7 @@
                                                         </td>
                                                         <td class="px-6 py-4">
                                                             <div class="whitespace-normal break-words">
-                                                                Artikulasi
+                                                                Penguasa materi
                                                             </div>
                                                         </td>
                                                         <td class="px-6 py-4 whitespace-nowrap">
@@ -1056,7 +1048,7 @@
                                                         </td>
                                                         <td class="px-6 py-4">
                                                             <div class="whitespace-normal break-words">
-                                                                Semangat
+                                                                Pembawaan gerakan
                                                             </div>
                                                         </td>
                                                         <td class="px-6 py-4 whitespace-nowrap">
@@ -1069,7 +1061,7 @@
                                                         </td>
                                                         <td class="px-6 py-4">
                                                             <div class="whitespace-normal break-words">
-                                                                Kekompakan
+                                                                Postur tubuh
                                                             </div>
                                                         </td>
                                                         <td class="px-6 py-4 whitespace-nowrap">
@@ -1082,7 +1074,7 @@
                                                         </td>
                                                         <td class="px-6 py-4">
                                                             <div class="whitespace-normal break-words">
-                                                                Kerapian shaf dan banjar
+                                                                Kerapian shaf dan banjar (PBB)
                                                             </div>
                                                         </td>
                                                         <td class="px-6 py-4 whitespace-nowrap">
